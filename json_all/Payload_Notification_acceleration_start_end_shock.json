@@ -1,0 +1,75 @@
+{
+    "Description": {
+        "Test_callback_function": "Payload",
+        "Test_description": "This test will check if received payload is equal to expected payload on Acceleration notification, Based on the notification configuration 458752, \n\nIn this test, it will check (I) On Acceleration notification - motion start : \n-> Single frame (value 10 at index 0), Motion start report (value 0x30 at index 4), \n\n(II) On Acceleration notification - motion end : \n-> Single frame (value 10 at index 0), Motion end report (value 0x31 at index 4), \n\n(III) On Acceleration notification - shock : \n-> Single frame (value 10 at index 0), Shock report (value 0x32 at index 4)."
+    },
+
+    "Config":
+    {
+        "Motion_stop" : "sys eve 3 1",
+        "Conf_notification_temp" : "conf set 0x102 458752"
+    },
+
+    "1": {
+        "State": "MOTION_START_COMMAND",
+        "Condition": "Class: accelerometer, type: motion start",
+        "Timeout": 5,
+        "Action": "sys eve 3 0",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "2": {
+        "State": "TRANSMIT_1_MOTION_START",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 30"
+    },
+
+    "3": {
+        "State": "MOTION_STOP_COMMAND",
+        "Condition": "Class: accelerometer, type: motion end",
+        "Timeout": 5,
+        "Action": "sys eve 3 1",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "4": {
+        "State": "TRANSMIT_2_MOTION_END",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 31 xx xx"
+    },
+
+    "5": {
+        "State": "MOTION_SHOCK_COMMAND",
+        "Condition": "Class: accelerometer, type: shock detected",
+        "Timeout": 5,
+        "Action": "sys eve 3 2",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "6": {
+        "State": "TRANSMIT_3_TEMP_HIGH",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 32 xx xx"
+    },
+
+    "7": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}

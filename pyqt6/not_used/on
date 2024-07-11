@@ -1,0 +1,1917 @@
+d,00:00:02.894. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.895. (CFG) No config file detected at 0x8083a65
+0d,00:00:02.896. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.896. (ACC) Update success
+0d,00:00:02.898. (GNSS) MT. Started
+0d,00:00:02.899. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.902. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.903. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.905. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.924. (ACC) Open success
+0d,00:00:02.925. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.930. (ACC) Disable success
+0d,00:00:02.931. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.933. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.934. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.937. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.938. (LORA) Joining the network
+0d,00:00:03.647. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:03.973. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.975. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:00:04.013. (APP) PWR. Battery remaining: 100%. Consumption: 0.045 mAh
+0d,00:00:04.205. (GNSS) MT. Power down
+0d,00:00:04.504. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.520. (ACC) Enable success
+0d,00:00:14.528. (ACC) Vector(mg): x:-66, y:31, z:1002
+0d,00:00:14.531. (ACC) Callback. Notif sleep
+0d,00:00:16.526. (LORA) RX LoRa event: join success
+0d,00:00:16.526. (LORA) FSM state: joining, event: success, next state: active
+0d,00:00:16.527. (APP) NET. LoRa notif network-up received
+0d,00:00:16.527. (APP) NET. FSM state: main-connecting, event: success, next state: main-connected
+0d,00:00:16.528. (LORA) TX. No buffer to send
+0d,00:00:16.530. (APP) EVT. got event class: network, type: main up
+0d,00*
+Incorrect password
+login: ***
+user> user> conf sh all
+Parameters
+ Full ID   Group      ID    Name                         Type      Value
+ 0x0000    internal   0     sys_highest_temperature      Integer   32         (0x00000020)
+ 0x0001    internal   1     sys_lowest_temperature       Integer   0          (0x00000000)
+ 0x0002    internal   2     sys_power_consumption        Integer   0          (0x00000000)
+ 0x0100    system     0     core_monitoring_period       Integer   300        (0x0000012c)
+ 0x0101    system     1     core_status_period           Integer   0          (0x00000000)
+ 0x0102    system     2     core_notif_enable1           Integer   0          (0x00000000)
+ 0x0103    system     3     core_notif_enable2           Integer   0          (0x00000000)
+ 0x0104    system     4     core_temp_high_threshold     Integer   100        (0x00000064)
+ 0x0105    system     5     core_temp_low_threshold      Integer   -100       (0xffffff9c)
+ 0x0106    system     6     core_temp_hysteresis         Integer   5          (0x00000005)
+ 0x0107    system     7     core_button1_map             Integer   56623104   (0x03600000)
+ 0x0108    system     8     core_button2_map             Integer   56623104   (0x03600000)
+ 0x0200    geoloc     0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    geoloc     1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    geoloc     2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    geoloc     3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    geoloc     4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    geoloc     5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    geoloc     6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    geoloc     7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    geoloc     8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    geoloc     9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    geoloc     10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    geoloc     11    geoloc_gbe_profile0_techno   Array     {05,00,00,00,00}
+ 0x020c    geoloc     12    geoloc_gbe_profile1_techno   Array     {05,00,00,00,00}
+ 0x020d    geoloc     13    geoloc_gbe_profile2_techno   Array     {05,00,00,00,00}
+ 0x0300    gnss       0     gnss_constellation           Integer   4          (0x00000004)
+ 0x0301    gnss       1     gnss_max_time                Integer   300        (0x0000012c)
+ 0x0302    gnss       2     gnss_t0_timeout              Integer   30         (0x0000001e)
+ 0x0303    gnss       3     gnss_ehpe                    Integer   30         (0x0000001e)
+ 0x0304    gnss       4     gnss_convergence             Integer   20         (0x00000014)
+ 0x0305    gnss       5     gnss_standby_time            Integer   14400      (0x00003840)
+ 0x0306    gnss       6     gnss_agnss_max_time          Integer   45         (0x0000002d)
+ 0x0307    gnss       7     gnss_t1_timeout              Integer   0          (0x00000000)
+ 0x0400    lr11xx     0     lr_constellation             Integer   6          (0x00000006)
+ 0x0401    lr11xx     1     lr_scan_mode                 Integer   1          (0x00000001)
+ 0x0402    lr11xx     2     lr_nb_scan                   Integer   2          (0x00000002)
+ 0x0403    lr11xx     3     lr_inter_scan_time           Integer   5          (0x00000005)
+ 0x0404    lr11xx     4     lr_max_wifi_bssid            Integer   4          (0x00000004)
+ 0x0500    ble scan   0     ble_scan_duration            Integer   3000       (0x00000bb8)
+ 0x0501    ble scan   1     ble_scan_window              Integer   120        (0x00000078)
+ 0x0502    ble scan   2     ble_scan_interval            Integer   130        (0x00000082)
+ 0x0503    ble scan   3     ble_scan_type                Integer   0          (0x00000000)
+ 0x0504    ble scan   4     ble_scan_min_rssi            Integer   -100       (0xffffff9c)
+ 0x0505    ble scan   5     ble_scan_filter1_mask        Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0506    ble scan   6     ble_scan_filter1_value       Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0507    ble scan   7     ble_scan_filter1_offset      Integer   0          (0x00000000)
+ 0x0508    ble scan   8     ble_scan_filter2_mask        Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0509    ble scan   9     ble_scan_filter2_value       Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x050a    ble scan   10    ble_scan_filter1_offset      Integer   0          (0x00000000)
+ 0x050b    ble scan   11    ble_scan_nb_beacons          Integer   4          (0x00000004)
+ 0x050c    ble scan   12    ble_scan_report_type         Integer   0          (0x00000000)
+ 0x050d    ble scan   13    ble_scan_report_id_ofs       Integer   0          (0x00000000)
+ 0x0600    accelero   0     accelero_motion_sensi        Integer   16         (0x00000010)
+ 0x0601    accelero   1     accelero_motion_duration     Integer   20         (0x00000014)
+ 0x0602    accelero   2     accelero_full_scale          Integer   1          (0x00000001)
+ 0x0603    accelero   3     accelero_output_data_rate    Integer   0          (0x00000000)
+ 0x0604    accelero   4     accelero_shock_threshold     Integer   0          (0x00000000)
+ 0x0700    network    0     net_selection                Integer   0          (0x00000000)
+ 0x0701    network    1     net_reconnection_spacing     Integer   600        (0x00000258)
+ 0x0800    lorawan    0     lorawan_cnx_timeout          Integer   0          (0x00000000)
+ 0x0801    lorawan    1     lorawan_dl_trigger_period    Integer   3600       (0x00000e10)
+ 0x0802    lorawan    2     lorawan_probe_max_attempts   Integer   0          (0x00000000)
+ 0x0803    lorawan    3     lorawan_probe_timeout        Integer   600        (0x00000258)
+ 0x0804    lorawan    4     lorawan_s1_tx_strategy       Integer   265        (0x00000109)
+ 0x0805    lorawan    5     lorawan_s1_ul_port           Integer   19         (0x00000013)
+ 0x0806    lorawan    6     lorawan_s1_dl_port           Integer   3          (0x00000003)
+OK
+user> 
+user> 
+user> 
+user> 
+login: 
+login: 
+login: ***
+super> super> 
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {05,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {05,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {05,00,00,00,00}
+OK
+super> confs  sh gr
+Groups of parameters
+ ID    Name
+ 0     internal
+ 1     system
+ 2     geoloc
+ 3     gnss
+ 4     lr11xx
+ 5     ble scan1
+ 6     ble scan2
+ 7     accelero
+ 8     network
+ 9     lorawan
+OK
+super> 0d,00:00:48.364. (ACC) Vector(mg): x:-63, y:57, z:997
+0d,00:00:48.365. (ACC) Callback. Notif wake
+0d,00:00:48.365. (ACC) Motion start 
+0d,00:00:48.366. (APP) EVT. got event class: accelerometer, type: motion start
+0d,00:00:48.366. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,00:00:58.393. (ACC) Vector(mg): x:-61, y:53, z:991
+0d,00:00:58.394. (ACC) Callback. Notif wake
+0d,00:01:05.841. (LORA) RX LoRa event: join failure
+s0d,00:01:08.410. (ACC) Vector(mg): x:-50, y:58, z:994
+0d,00:01:08.412. (ACC) Callback. Notif wake
+ sys eve
+Missing argument
+Class 0. Name: button_1
+ Event  0, name: press
+ Event  1, name: long press
+ Event  2, name: 1 click
+ Event  3, name: 2 clicks
+ Event  4, name: 3 clicks
+ Event  5, name: sequence reset
+ Event  6, name: sequence bond delete
+ Event  7, name: sequence BLE boot
+Class 1. Name: button_2
+ Event  0, name: press
+ Event  1, name: long press
+ Event  2, name: 1 click
+ Event  3, name: 2 clicks
+ Event  4, name: 3 clicks
+ Event  5, name: sequence reset
+ Event  6, name: sequence bond delete
+ Event  7, name: sequence BLE boot
+Class 2. Name: buzzer
+ Event  0, name: on
+ Event  1, name: off
+Class 3. Name: accelerometer
+ Event  0, name: motion start
+ Event  1, name: motion end
+ Event  2, name: shock detected
+Class 4. Name: power
+ Event  0, name: low
+ Event  1, name: charging
+ Event  2, name: not charging
+Class 5. Name: temperature
+ Event  0, name: normal
+ Event  1, name: low
+ Event  2, name: high
+Class 6. Name: geolocation
+ Event  0, name: start
+ Event  1, name: done
+ Event  2, name: complete
+ Event  3, name: abort
+ Event  4, name: geoloc timeout acq
+ Event  5, name: geoloc timeout hold
+ Event  6, name: geozoning inside
+ Event  7, name: geozoning outside
+Class 7. Name: configuration
+ Event: bitmap of groups
+Class 8. Name: network
+ Event  0, name: main up
+ Event  1, name: backup up
+ Event  2, name: down
+ Event  3, name: hold
+ Event  4, name: data-pipe 1 up
+ Event  5, name: data-pipe 1 down
+ Event  6, name: data-pipe 1 RX
+Class 9. Name: core
+ Event  0, name: app init done
+ Event  1, name: core off
+ Event  2, name: core skip off
+ Event  3, name: core running
+ Event  4, name: core hold
+ Event  5, name: core systime update
+ Event  6, name: start device
+ Event  7, name: stop device
+ Event  8, name: sos start
+ Event  9, name: sos_stop
+ Event 10, name: Status UL
+ Event 11, name: Device monitoring
+ Event 12, name: pos on demand
+ Event 13, name: almanac refresh
+ Event 14, name: tamper on
+ Event 15, name: tamper off
+Class 10. Name: BLE
+ Event  0, name: BLE idle
+ Event  1, name: BLE fast advertising
+ Event  2, name: BLE slow advertising
+ Event  3, name: BLE connected
+ Event  4, name: BLE bonded
+ERROR
+super> 0d,00:01:18.552. (ACC) Vector(mg): x:-57, y:40, z:991
+0d,00:01:18.554. (ACC) Callback. Notif wake
+0d,00:01:28.567. (ACC) Vector(mg): x:-47, y:58, z:986
+0d,00:01:28.570. (ACC) Callback. Notif wake
+0d,00:01:29.204. (ACC) Vector(mg): x:-51, y:58, z:987
+0d,00:01:29.204. (ACC) Callback. Notif sleep
+
+super> 
+super> 0d,00:01:36.596. (ACC) Vector(mg): x:-51, y:48, z:979
+0d,00:01:36.597. (ACC) Callback. Notif wake
+
+super> conf sh gr            0d,00:01:46.613. (ACC) Vector(mg): x:-55, y:38, z:992
+0d,00:01:46.616. (ACC) Callback. Notif wake
+0d,00:01:56.626. (ACC) Vector(mg): x:-61, y:46, z:998
+0d,00:01:56.627. (ACC) Callback. Notif wake
+0d,00:02:06.637. (ACC) Vector(mg): x:-63, y:54, z:992
+0d,00:02:06.638. (ACC) Callback. Notif wake
+0d,00:02:16.648. (ACC) Vector(mg): x:-51, y:53, z:978
+0d,00:02:16.650. (ACC) Callback. Notif wake
+0d,00:02:26.662. (ACC) Vector(mg): x:-54, y:47, z:1001
+0d,00:02:26.663. (ACC) Callback. Notif wake
+0d,00:02:36.673. (ACC) Vector(mg): x:-64, y:52, z:985
+0d,00:02:36.675. (ACC) Callback. Notif wake
+0d,00:02:37.393. (ACC) Vector(mg): x:-49, y:49, z:994
+0d,00:02:37.395. (ACC) Callback. Notif sleep
+0d,00:03:38.510. (ACC) Vector(mg): x:-63, y:47, z:998
+0d,00:03:38.511. (ACC) Callback. Notif wake
+0d,00:03:48.526. (ACC) Vector(mg): x:-56, y:54, z:994
+0d,00:03:48.526. (ACC) Callback. Notif wake
+0d,00:03:49.835. (LORA) RX LoRa event: join success
+0d,00:03:49.836. (LORA) FSM state: joining, event: success, next state: active
+0d,00:03:49.836. (APP) NET. LoRa notif network-up received
+0d,00:03:49.837. (APP) NET. FSM state: main-connecting, event: success, next state: main-connected
+0d,00:03:49.837. (LORA) TX. No buffer to send
+0d,00:03:49.839. (APP) EVT. got event class: network, type: main up
+0d,00:03:49.840. (APP) Main. No FSM entry for cur state: active and event:done
+0d,00:03:49.841. (APP) EVT. got event class: network, type: data-pipe 1 up
+0d,00:03:54.838. (LR1110) RX Time update (status: 1)
+0d,00:03:54.838. (LR1110) Correct GPS time: 1403008589.409
+0d,00:03:54.839. (LORA) RX LoRa event: RX time update success
+0d,00:03:54.839. (LORA) TX. No buffer to send
+0d,00:03:54.840. (APP) EVT. got event class: core, type: core systime update
+0d,00:03:54.840. (APP) GNSS-MGR. Check almanac validity
+0d,00:03:58.594. (ACC) Vector(mg): x:-63, y:48, z:999
+0d,00:03:58.594. (ACC) Callback. Notif wake
+0d,00:04:08.605. (ACC) Vector(mg): x:-60, y:54, z:988
+0d,00:04:08.606. (ACC) Callback. Notif wake
+
+super> co0d,00:04:18.619. (ACC) Vector(mg): x:-56, y:61, z:992
+0d,00:04:18.621. (ACC) Callback. Notif wake
+nf shg    gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {05,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {05,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {05,00,00,00,00}
+OK
+super> 0d,00:04:28.714. (ACC) Vector(mg): x:-49, y:52, z:990
+0d,00:04:28.717. (ACC) Callback. Notif wake
+sys er  res
+Resetting...
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.874. (LR1110) Reset done
+0d,00:00:00.876. (ACC) Init success
+0d,00:00:02.916. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.917. (CFG) No config file detected at 0x80872e4
+0d,00:00:02.917. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.918. (ACC) Update success
+0d,00:00:02.920. (GNSS) MT. Started
+0d,00:00:02.921. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.922. (LORA) Event failure not relevant for state shutdown
+0d,00:00:02.922. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.923. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.923. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.946. (ACC) Open success
+0d,00:00:02.946. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.950. (ACC) Disable success
+0d,00:00:02.950. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.951. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.951. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.952. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.953. (LORA) Joining the network
+0d,00:00:03.982. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.983. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:00:04.017. (APP) PWR. Battery remaining: 100%. Consumption: 0.046 mAh
+0d,00:00:04.281. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:04.549. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.573. (ACC) Enable success
+0d,00:00:04.730. (GNSS) MT. Power down
+***
+super> super> 
+super> 
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {05,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {05,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {05,00,00,00,00}
+OK
+super> 0d,00:00:16.308. (LORA) RX LoRa event: join success
+0d,00:00:16.309. (LORA) FSM state: joining, event: success, next state: active
+0d,00:00:16.309. (APP) NET. LoRa notif network-up received
+0d,00:00:16.310. (APP) NET. FSM state: main-connecting, event: success, next state: main-connected
+0d,00:00:16.311. (LORA) TX. No buffer to send
+0d,00:00:16.313. (APP) EVT. got event class: network, type: main up
+0d,00:00:16.313. (APP) Main. No FSM entry for cur state: active and event:done
+0d,00:00:16.314. (APP) EVT. got event class: network, type: data-pipe 1 up
+0d,00:00:21.854. (LR1110) RX Time update (status: 1)
+0d,00:00:21.854. (LR1110) Correct GPS time: 1403008650.694
+0d,00:00:21.855. (LORA) RX LoRa event: RX time update success
+0d,00:00:21.855. (LORA) TX. No buffer to send
+0d,00:00:21.856. (APP) EVT. got event class: core, type: core systime update
+0d,00:00:21.856. (APP) GNSS-MGR. Check almanac validity
+0d,00:00:48.391. (ACC) Vector(mg): x:-54, y:52, z:982
+0d,00:00:48.393. (ACC) Callback. Notif wake
+0d,00:00:48.393. (ACC) Motion start 
+0d,00:00:48.394. (APP) EVT. got event class: accelerometer, type: motion start
+0d,00:00:48.394. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,00:00:58.420. (ACC) Vector(mg): x:-48, y:48, z:988
+0d,00:00:58.421. (ACC) Callback. Notif wake
+0d,00:01:04.898. (ACC) Vector(mg): x:-53, y:52, z:996
+0d,00:01:04.899. (ACC) Callback. Notif sleep
+0d,00:01:32.956. (ACC) Vector(mg): x:-60, y:40, z:992
+0d,00:01:32.957. (ACC) Callback. Notif wake
+0d,00:01:42.967. (ACC) Vector(mg): x:-45, y:54, z:996
+0d,00:01:42.968. (ACC) Callback. Notif wake
+0d,00:01:52.977. (ACC) Vector(mg): x:-59, y:53, z:987
+0d,00:01:52.979. (ACC) Callback. Notif wake
+0d,00:02:02.989. (ACC) Vector(mg): x:-62, y:58, z:1000
+0d,00:02:02.991. (ACC) Callback. Notif wake
+0d,00:02:13.003. (ACC) Vector(mg): x:-53, y:44, z:998
+0d,00:02:13.005. (ACC) Callback. Notif wake
+0d,00:02:23.018. (ACC) Vector(mg): x:-48, y:51, z:991
+0d,00:02:23.018. (ACC) Callback. Notif wake
+0d,00:02:33.029. (ACC) Vector(mg): x:-59, y:45, z:988
+0d,00:02:33.031. (ACC) Callback. Notif wake
+0d,00:02:41.393. (ACC) Vector(mg): x:-51, y:52, z:1002
+0d,00:02:41.395. (ACC) Callback. Notif sleep
+0d,00:04:53.499. (ACC) Vector(mg): x:-60, y:50, z:998
+0d,00:04:53.500. (ACC) Callback. Notif wake
+
+super> 
+super> 
+super> sys info
+System
+ Application state: active
+ Battery level: 116 mV
+ Temperatures
+  Current: 30 degree C
+  Highest: 32 degree C
+  Lowest: 0 degree C
+  Status: normal
+ Device
+  Next monitoring: 3
+  Next status: 0
+ CPU consumption: 0.000 mAh
+ Date: Fri 21-Jun 12:41:51 UTC 2024
+ Uptime: 0d,00:05:00
+Versions
+ AOS: 1.0-0. Built on: Jun 21 2024, 10:52:55
+ AT3: 1.0-195. Build on: Jun 21 2024, 14:28:01
+ Config: 1.0.0.0
+OK
+super> 0d,00:05:03.543. (ACC) Vector(mg): x:-58, y:57, z:983
+0d,00:05:03.545. (ACC) Callback. Notif wake
+0d,00:05:04.333. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:05:04.334. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:05:04.373. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+
+super> conf sh 0d,00:05:13.575. (ACC) Vector(mg): x:-61, y:60, z:987
+0d,00:05:13.576. (ACC) Callback. Notif wake
+gr
+Groups of parameters
+ ID    Name
+ 0     internal
+ 1     system
+ 2     geoloc
+ 3     gnss
+ 4     lr11xx
+ 5     ble scan1
+ 6     ble scan2
+ 7     accelero
+ 8     network
+ 9     lorawan
+OK
+super> super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {05,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {05,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {05,00,00,00,00}
+OK
+super> 0d,00:05:23.670. (ACC) Vector(mg): x:-63, y:53, z:1007
+0d,00:05:23.672. (ACC) Callback. Notif wake
+0d,00:05:33.683. (ACC) Vector(mg): x:-48, y:47, z:985
+0d,00:05:33.685. (ACC) Callback. Notif wake
+0d,00:05:43.697. (ACC) Vector(mg): x:-56, y:56, z:984
+0d,00:05:43.699. (ACC) Callback. Notif wake
+0d,00:05:53.711. (ACC) Vector(mg): x:-54, y:54, z:990
+0d,00:05:53.713. (ACC) Callback. Notif wake
+0d,00:06:03.723. (ACC) Vector(mg): x:-55, y:46, z:990
+0d,00:06:03.724. (ACC) Callback. Notif wake
+0d,00:06:13.734. (ACC) Vector(mg): x:-56, y:48, z:993
+0d,00:06:13.735. (ACC) Callback. Notif wake
+0d,00:06:23.746. (ACC) Vector(mg): x:-64, y:42, z:982
+0d,00:06:23.747. (ACC) Callback. Notif wake
+0d,00:06:33.757. (ACC) Vector(mg): x:-60, y:65, z:1004
+0d,00:06:33.759. (ACC) Callback. Notif wake
+0d,00:06:43.771. (ACC) Vector(mg): x:-60, y:55, z:999
+0d,00:06:43.772. (ACC) Callback. Notif wake
+0d,00:06:53.784. (ACC) Vector(mg): x:-56, y:54, z:1007
+0d,00:06:53.786. (ACC) Callback. Notif wake
+0d,00:07:03.796. (ACC) Vector(mg): x:-52, y:51, z:996
+0d,00:07:03.798. (ACC) Callback. Notif wake
+0d,00:07:13.809. (ACC) Vector(mg): x:-61, y:49, z:993
+0d,00:07:13.810. (ACC) Callback. Notif wake
+0d,00:07:23.822. (ACC) Vector(mg): x:-50, y:53, z:994
+0d,00:07:23.823. (ACC) Callback. Notif wake
+
+super> 
+super> conf erase
+Config erasing success
+OK
+super> 
+super> 
+super> con0d,00:07:33.881. (ACC) Vector(mg): x:-44, y:51, z:998
+0d,00:07:33.881. (ACC) Callback. Notif wake
+f     conf save
+Unknown: cconf
+ble         config      geoloc      gnss        help        logout      
+lora        network     power       ?           system      wifi        
+ERROR
+super> super> cconf saveconf save 
+Config saving success
+OK
+super> 0d,00:07:43.946. (ACC) Vector(mg): x:-55, y:57, z:983
+0d,00:07:43.949. (ACC) Callback. Notif wake
+
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 0d,00:07:54.037. (ACC) Vector(mg): x:-61, y:48, z:997
+0d,00:07:54.039. (ACC) Callback. Notif wake
+
+super> 
+super> 
+super> 0d,00:08:04.054. (ACC) Vector(mg): x:-43, y:45, z:994
+0d,00:08:04.055. (ACC) Callback. Notif wake
+0d,00:08:14.067. (ACC) Vector(mg): x:-56, y:59, z:988
+0d,00:08:14.070. (ACC) Callback. Notif wake
+0d,00:08:24.082. (ACC) Vector(mg): x:-55, y:41, z:982
+0d,00:08:24.083. (ACC) Callback. Notif wake
+super> conf sh gr 2super> 
+super> 
+super> 0d,00:08:34.100. (ACC) Vector(mg): x:-58, y:51, z:993
+0d,00:08:34.101. (ACC) Callback. Notif wake
+pa  
+super> 0d,00:08:44.114. (ACC) Vector(mg): x:-47, y:43, z:933
+0d,00:08:44.116. (ACC) Callback. Notif wake
+
+super> 
+super> conf erad se
+Config erasing success
+OK
+super> 
+super> 
+super> conf sh gr 20d,00:08:54.178. (ACC) Vector(mg): x:-60, y:60, z:991
+0d,00:08:54.181. (ACC) Callback. Notif wake
+
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> con0d,00:09:04.339. (ACC) Vector(mg): x:-63, y:58, z:1008
+0d,00:09:04.340. (ACC) Callback. Notif wake
+f sh gr 
+Groups of parameters
+ ID    Name
+ 0     internal
+ 1     system
+ 2     geoloc
+ 3     gnss
+ 4     lr11xx
+ 5     ble scan1
+ 6     ble scan2
+ 7     accelero
+ 8     network
+ 9     lorawan
+OK
+super> 0d,00:09:14.367. (ACC) Vector(mg): x:-51, y:45, z:983
+0d,00:09:14.370. (ACC) Callback. Notif wake
+0d,00:09:24.380. (ACC) Vector(mg): x:-65, y:50, z:997
+0d,00:09:24.382. (ACC) Callback. Notif wake
+0d,00:09:34.393. (ACC) Vector(mg): x:-56, y:57, z:985
+0d,00:09:34.395. (ACC) Callback. Notif wake
+0d,00:09:44.405. (ACC) Vector(mg): x:-56, y:53, z:986
+0d,00:09:44.406. (ACC) Callback. Notif wake
+0d,00:09:54.418. (ACC) Vector(mg): x:-57, y:53, z:986
+0d,00:09:54.419. (ACC) Callback. Notif wake
+0d,00:10:04.431. (ACC) Vector(mg): x:-56, y:59, z:993
+0d,00:10:04.433. (ACC) Callback. Notif wake
+0d,00:10:05.022. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:10:05.023. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:10:05.062. (APP) PWR. Battery remaining: 100%. Consumption: 0.061 mAh
+0d,00:10:14.459. (ACC) Vector(mg): x:-71, y:39, z:992
+0d,00:10:14.461. (ACC) Callback. Notif wake
+0d,00:10:24.471. (ACC) Vector(mg): x:-59, y:45, z:981
+0d,00:10:24.473. (ACC) Callback. Notif wake
+0d,00:10:34.482. (ACC) Vector(mg): x:-56, y:52, z:992
+0d,00:10:34.483. (ACC) Callback. Notif wake
+0d,00:10:44.492. (ACC) Vector(mg): x:-58, y:51, z:998
+0d,00:10:44.492. (ACC) Callback. Notif wake
+0d,00:10:54.503. (ACC) Vector(mg): x:-55, y:52, z:996
+0d,00:10:54.504. (ACC) Callback. Notif wake
+0d,00:11:04.516. (ACC) Vector(mg): x:-52, y:49, z:1008
+0d,00:11:04.518. (ACC) Callback. Notif wake
+0d,00:11:14.528. (ACC) Vector(mg): x:-49, y:49, z:985
+0d,00:11:14.529. (ACC) Callback. Notif wake
+0d,00:11:24.542. (ACC) Vector(mg): x:-62, y:56, z:1004
+0d,00:11:24.545. (ACC) Callback. Notif wake
+0d,00:11:34.558. (ACC) Vector(mg): x:-56, y:35, z:1000
+0d,00:11:34.559. (ACC) Callback. Notif wake
+0d,00:11:44.569. (ACC) Vector(mg): x:-57, y:45, z:995
+0d,00:11:44.570. (ACC) Callback. Notif wake
+0d,00:11:54.580. (ACC) Vector(mg): x:-55, y:47, z:1000
+0d,00:11:54.580. (ACC) Callback. Notif wake
+0d,00:12:04.591. (ACC) Vector(mg): x:-57, y:47, z:1010
+0d,00:12:04.592. (ACC) Callback. Notif wake
+0d,00:12:14.605. (ACC) Vector(mg): x:-65, y:48, z:1003
+0d,00:12:14.606. (ACC) Callback. Notif wake
+0d,00:12:24.619. (ACC) Vector(mg): x:-59, y:55, z:991
+0d,00:12:24.620. (ACC) Callback. Notif wake
+0d,00:12:34.630. (ACC) Vector(mg): x:-55, y:49, z:1003
+0d,00:12:34.631. (ACC) Callback. Notif wake
+0d,00:12:44.641. (ACC) Vector(mg): x:-58, y:42, z:985
+0d,00:12:44.642. (ACC) Callback. Notif wake
+0d,00:12:54.654. (ACC) Vector(mg): x:-52, y:52, z:982
+0d,00:12:54.655. (ACC) Callback. Notif wake
+0d,00:13:04.665. (ACC) Vector(mg): x:-51, y:51, z:997
+0d,00:13:04.666. (ACC) Callback. Notif wake
+0d,00:13:14.676. (ACC) Vector(mg): x:-51, y:43, z:995
+0d,00:13:14.676. (ACC) Callback. Notif wake
+0d,00:13:24.689. (ACC) Vector(mg): x:-56, y:48, z:979
+0d,00:13:24.691. (ACC) Callback. Notif wake
+0d,00:13:33.641. (ACC) Vector(mg): x:-54, y:42, z:977
+0d,00:13:33.642. (ACC) Callback. Notif sleep
+0d,00:13:34.119. (ACC) Vector(mg): x:-56, y:51, z:987
+0d,00:13:34.120. (ACC) Callback. Notif wake
+0d,00:13:44.130. (ACC) Vector(mg): x:-55, y:59, z:997
+0d,00:13:44.132. (ACC) Callback. Notif wake
+0d,00:13:54.142. (ACC) Vector(mg): x:-62, y:51, z:1013
+0d,00:13:54.144. (ACC) Callback. Notif wake
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.876. (LR1110) Reset done
+0d,00:00:00.878. (ACC) Init success
+0d,00:00:02.916. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.917. (CFG) No config file detected at 0x80872e4
+0d,00:00:02.918. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.919. (ACC) Update success
+0d,00:00:02.920. (GNSS) MT. Started
+0d,00:00:02.921. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.922. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.923. (APP) Main. FSM state: init, event: skip, next state: active
+0d,00:00:02.946. (ACC) Open success
+0d,00:00:02.946. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.950. (ACC) Disable success
+0d,00:00:02.950. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.951. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.952. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.953. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.953. (LORA) Joining the network
+0d,00:00:03.958. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.959. (APP) DEV. Temp:31, new high: no, new low: no
+0d,00:00:03.998. (APP) PWR. Battery remaining: 100%. Consumption: 0.045 mAh
+0d,00:00:04.472. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.493. (ACC) Enable success
+
+login: 
+login: 0d,00:00:05.251. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+
+login: 
+login: 0d,00:00:06.431. (GNSS) MT. Power down
+
+login: 
+login: ***
+super> super> 
+super> 
+super> 
+super> sys res
+Resetting...
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.876. (LR1110) Reset done
+0d,00:00:00.878. (ACC) Init success
+0d,00:00:02.919. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.920. (CFG) No config file detected at 0x80872e4
+0d,00:00:02.921. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.922. (ACC) Update success
+0d,00:00:02.923. (GNSS) MT. Started
+0d,00:00:02.924. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.925. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.926. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.926. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.949. (ACC) Open success
+0d,00:00:02.949. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.953. (ACC) Disable success
+0d,00:00:02.953. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.954. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.955. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.956. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.956. (LORA) Joining the network
+0d,00:00:03.988. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.989. (APP) DEV. Temp:32, new high: no, new low: no
+0d,00:00:04.023. (APP) PWR. Battery remaining: 100%. Consumption: 0.045 mAh
+0d,00:00:04.216. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:04.495. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.514. (ACC) Enable success
+0d,00:00:05.024. (GNSS) MT. Power down
+
+login: 
+login: 
+login: **  ***
+super> super> 0d,00:00:12.466. (LORA) RX LoRa event: join failure
+
+super> 
+super> 
+super> conf sh gr 2 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 
+super> 
+super> conf erase
+Config erasing success
+OK
+super> 
+super> conf save
+Config saving success
+OK
+super> 
+super> 
+super> sys res
+Resetting...
+0d,00:00:35.830. (ACC) Vector(mg): x:-49, y:35, z:986
+0d,00:00:35.832. (ACC) Callback. Notif sleep
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.876. (LR1110) Reset done
+0d,00:00:00.878. (ACC) Init success
+0d,00:00:02.920. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.921. (CFG) No config file detected at 0x80872e4
+0d,00:00:02.922. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.922. (ACC) Update success
+0d,00:00:02.924. (GNSS) MT. Started
+0d,00:00:02.925. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.926. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.927. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.927. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.950. (ACC) Open success
+0d,00:00:02.950. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.954. (ACC) Disable success
+0d,00:00:02.954. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.955. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.956. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.957. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.957. (LORA) Joining the network
+0d,00:00:03.970. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.972. (APP) DEV. Temp:31, new high: no, new low: no
+0d,00:00:04.008. (APP) PWR. Battery remaining: 100%. Consumption: 0.045 mAh
+0d,00:00:04.490. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.509. (ACC) Enable success
+0d,00:00:04.859. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:05.238. (GNSS) MT. Power down
+
+login: 
+login: 
+login: ***
+super> super> 
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 0d,00:00:14.491. (LORA) RX LoRa event: join failure
+0d,00:00:48.333. (ACC) Vector(mg): x:-59, y:41, z:988
+0d,00:00:48.334. (ACC) Callback. Notif sleep
+conf sh gr 
+Groups of parameters
+ ID    Name
+ 0     internal
+ 1     system
+ 2     geoloc
+ 3     gnss
+ 4     lr11xx
+ 5     ble scan1
+ 6     ble scan2
+ 7     accelero
+ 8     network
+ 9     lorawan
+OK
+super> 0d,00:01:06.452. (LORA) RX LoRa event: join success
+0d,00:01:06.452. (LORA) FSM state: joining, event: success, next state: active
+0d,00:01:06.453. (APP) NET. LoRa notif network-up received
+0d,00:01:06.453. (APP) NET. FSM state: main-connecting, event: success, next state: main-connected
+0d,00:01:06.454. (LORA) TX. No buffer to send
+0d,00:01:06.456. (APP) EVT. got event class: network, type: main up
+0d,00:01:06.456. (APP) Main. No FSM entry for cur state: active and event:done
+0d,00:01:06.457. (APP) EVT. got event class: network, type: data-pipe 1 up
+0d,00:01:06.459. (LORA) TX request status: busy
+0d,00:01:06.459. (LORA) TX queued
+0d,00:01:08.497. (LORA) TX request status: busy
+0d,00:01:10.503. (LORA) TX request status: busy
+0d,00:01:12.507. (LORA) TX request status: busy
+0d,00:01:12.714. (LR1110) RX Time update (status: 1)
+0d,00:01:12.714. (LR1110) Correct GPS time: 1403009655.799
+0d,00:01:12.715. (LORA) RX LoRa event: RX time update success
+0d,00:01:12.715. (LR1110) TX.Size: 40. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:01:12.716. (LORA) TX request status: success
+0d,00:01:12.716. (LORA) TX (Port: 19, DR 16, TX#1): 08 64 ff ff 00 1f 00 01 00 c3 01 00 00 00 22 01 08 00 00 00 00 20 00 42 00 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0d,00:01:12.721. (APP) EVT. got event class: core, type: core systime update
+0d,00:01:12.722. (APP) GNSS-MGR. Check almanac validity
+0d,00:01:14.547. (LORA) TX. No buffer to send
+0d,00:01:18.134. (LORA) RX LoRa event: TX success
+0d,00:01:18.135. (LORA) TX. No buffer to send
+conf sh gr 8
+Group 8 (network)
+ Full ID   ID    Name                         Type      Value
+ 0x0800    0     net_selection                Integer   0          (0x00000000)
+ 0x0801    1     net_reconnection_spacing     Integer   600        (0x00000258)
+OK
+super> cond   f sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   600        (0x00000258)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 0d,00:05:04.372. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:05:04.373. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:05:04.411. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+0d,00:10:04.385. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:10:04.386. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:10:04.424. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+0d,00:15:04.395. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:15:04.396. (APP) DEV. Temp:31, new high: no, new low: no
+0d,00:15:04.435. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+0d,00:20:04.407. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:20:04.408. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:20:04.447. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+0d,00:25:04.423. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:25:04.424. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:25:04.463. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+0d,00:30:04.437. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:30:04.438. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:30:04.477. (APP) PWR. Battery remaining: 100%. Consumption: 0.058 mAh
+
+super> xond f    conf sh gr 9
+Group 9 (lorawan)
+ Full ID   ID    Name                         Type      Value
+ 0x0900    0     lorawan_cnx_timeout          Integer   0          (0x00000000)
+ 0x0901    1     lorawan_dl_trigger_period    Integer   3600       (0x00000e10)
+ 0x0902    2     lorawan_probe_max_attempts   Integer   0          (0x00000000)
+ 0x0903    3     lorawan_probe_timeout        Integer   600        (0x00000258)
+ 0x0904    4     lorawan_s1_tx_strategy       Integer   265        (0x00000109)
+ 0x0905    5     lorawan_s1_ul_port           Integer   19         (0x00000013)
+ 0x0906    6     lorawan_s1_dl_port           Integer   3          (0x00000003)
+OK
+super> 
+super> conf sh gr
+Groups of parameters
+ ID    Name
+ 0     internal
+ 1     system
+ 2     geoloc
+ 3     gnss
+ 4     lr11xx
+ 5     ble scan1
+ 6     ble scan2
+ 7     accelero
+ 8     network
+ 9     lorawan
+OK
+super> 0d,00:35:04.521. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:35:04.522. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:35:04.561. (APP) PWR. Battery remaining: 100%. Consumption: 0.059 mAh
+
+super> conf sh gr 5
+Group 5 (ble scan1)
+ Full ID   ID    Name                         Type      Value
+ 0x0500    0     ble_scan_duration            Integer   3000       (0x00000bb8)
+ 0x0501    1     ble_scan_window              Integer   120        (0x00000078)
+ 0x0502    2     ble_scan_interval            Integer   130        (0x00000082)
+ 0x0503    3     ble_scan_type                Integer   0          (0x00000000)
+ 0x0504    4     ble_scan_min_rssi            Integer   -100       (0xffffff9c)
+ 0x0505    5     ble_scan_filter1_mask        Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0506    6     ble_scan_filter1_value       Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0507    7     ble_scan_filter1_offset      Integer   0          (0x00000000)
+ 0x0508    8     ble_scan_filter2_mask        Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x0509    9     ble_scan_filter2_value       Array     {00,00,00,00,00,00,00,00,00,00}
+ 0x050a    10    ble_scan_filter1_offset      Integer   0          (0x00000000)
+ 0x050b    11    ble_scan_nb_beacons          Integer   4          (0x00000004)
+ 0x050c    12    ble_scan_report_type         Integer   0          (0x00000000)
+ 0x050d    13    ble_scan_report_id_ofs       Integer   0          (0x00000000)
+OK
+super> 0d,00:40:04.614. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:40:04.615. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:40:04.654. (APP) PWR. Battery remaining: 100%. Consumption: 0.059 mAh
+0d,00:45:04.629. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:45:04.630. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:45:04.669. (APP) PWR. Battery remaining: 100%. Consumption: 0.059 mAh
+0d,00:50:04.645. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:50:04.646. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:50:04.684. (APP) PWR. Battery remaining: 100%. Consumption: 0.059 mAh
+
+super> 
+super> 
+super> conf set 0x203 2
+ Detected type: Integer
+0d,00:50:41.504. (APP) EVT. got event class: configuration, type: 0x00000004
+0d,00:50:41.504. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+OK
+super> conf set 0x204 3
+ Detected type: Integer
+0d,00:50:46.867. (APP) EVT. got event class: configuration, type: 0x00000004
+0d,00:50:46.867. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+OK
+super> conf set 0x205 20
+ Detected type: Integer
+0d,00:50:55.191. (APP) EVT. got event class: configuration, type: 0x00000004
+0d,00:50:55.192. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+OK
+super> conf set 0x20b {83,85,00,00,00},00,00,00} 6,00,00,00},}0}0}
+ Detected type: Array
+0d,00:51:14.663. (APP) EVT. got event class: configuration, type: 0x00000004
+0d,00:51:14.664. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+OK
+super> conf set 0x208 12
+ Detected type: Integer
+0d,00:51:23.474. (APP) EVT. got event class: configuration, type: 0x00000004
+0d,00:51:23.475. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+OK
+super> 
+super> 
+super> sys eve 3 0
+Sending event. Class: accelerometer, type: motion start
+0d,00:51:35.262. (APP) EVT. got event class: accelerometer, type: motion start
+0d,00:51:35.263. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x4. Cur prio: -1, New_prio: 1. New_prof: 0, to: -1
+0d,00:51:35.264. (APP) GEO-MGR. FSM state: idle, event: start, next state: acquiring
+0d,00:51:35.265. (BLE) Scan. RF switch event: acquired
+0d,00:51:35.265. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:51:35.266. (GEO) Start techno ble scan1 success
+0d,00:51:35.266. (APP) GEO-MGR. Event periodic not relevant for state acquiring
+0d,00:51:35.267. (APP) EVT. got event class: geolocation, type: start
+OK
+super> 0d,00:51:38.462. (BLE) Scan done
+0d,00:51:38.465. (BLE) Scan. RF switch event: released
+0d,00:51:38.466. (GEO) BLE result status: success
+0d,00:51:38.467. (GNSS) MT. RF switch event: acquired
+0d,00:51:38.468. (GNSS) MT. Started
+0d,00:51:38.469. (GEO) Start techno gnss success
+0d,00:51:40.050. (GNSS) MT. Clearing previous data
+0d,00:51:40.749. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:40.751. (GNSS) MT. TRACK-GLO, Nb sat: 0, 
+0d,00:51:40.752. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:41.756. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:41.758. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:41.759. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:42.756. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:42.758. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:42.760. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:43.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:43.757. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:43.759. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:44.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:44.758. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:44.759. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:45.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:45.757. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:45.759. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:46.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:46.757. (GNSS) MT. TRACK-GLO, Nb sat: 1, 70/0 
+0d,00:51:46.759. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:47.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:47.758. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:47.760. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:48.754. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:48.757. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:48.758. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:49.755. (GNSS) MT. TRACK-GPS, Nb sat: 0, 
+0d,00:51:49.758. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:49.760. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:50.757. (GNSS) MT. TRACK-GPS, Nb sat: 1, 4/25 
+0d,00:51:50.760. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:50.762. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:51.758. (GNSS) MT. TRACK-GPS, Nb sat: 1, 4/24 
+0d,00:51:51.760. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:51.762. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:52.760. (GNSS) MT. TRACK-GPS, Nb sat: 2, 4/25 31/26 
+0d,00:51:52.762. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/0 70/0 
+0d,00:51:52.764. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:53.762. (GNSS) MT. TRACK-GPS, Nb sat: 3, 4/25 31/28 32/32 
+0d,00:51:53.765. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/30 66/29 
+0d,00:51:53.767. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:54.762. (GNSS) MT. TRACK-GPS, Nb sat: 3, 4/23 31/29 32/31 
+0d,00:51:54.765. (GNSS) MT. TRACK-GLO, Nb sat: 2, 68/31 66/29 
+0d,00:51:54.767. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:55.816. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/0 3/0 21/0 17/0 4/23 28/0 19/0 22/0 31/29 32/30 
+0d,00:51:55.819. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/29 68/31 
+0d,00:51:55.821. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:56.822. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/0 3/0 21/0 17/0 4/26 28/0 19/0 32/32 22/0 31/25 
+0d,00:51:56.825. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/29 68/31 
+0d,00:51:56.827. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:57.825. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/0 3/0 21/0 17/0 4/24 28/0 19/0 32/29 22/0 31/29 
+0d,00:51:57.829. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/29 68/32 82/0 
+0d,00:51:57.830. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:58.824. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/0 3/28 21/0 17/0 4/25 28/0 19/0 32/29 22/0 31/29 
+0d,00:51:58.828. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/29 68/32 82/0 
+0d,00:51:58.830. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:51:59.838. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/0 3/28 21/0 17/0 4/26 28/23 19/0 32/29 22/0 31/28 
+0d,00:51:59.843. (GNSS) MT. TRACK-GLO, Nb sat: 4, 66/29 68/32 85/0 82/0 
+0d,00:51:59.845. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:00.924. (GNSS) MT. TRACK-GPS, Nb sat: 11, 2/25 3/26 21/0 17/0 37/0 4/26 28/25 19/20 32/29 22/0 31/28 
+0d,00:52:00.928. (GNSS) MT. TRACK-GLO, Nb sat: 4, 66/29 68/32 85/0 82/0 
+0d,00:52:00.930. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:01.028. (GNSS) MT. TTFF in 23s
+0d,00:52:01.028. (GNSS) MT. Setting system time to 6/21/2024 13:44:45
+0d,00:52:01.029. (GNSS) MT. FIX: 2d, ehpe 135.90, 5 sats - 43.6168500 7.0660766 ALT=23020
+0d,00:52:02.053. (GNSS) MT. FIX: 3d, ehpe 85.20, 5 sats - 43.6166950 7.0660183 ALT=13840
+0d,00:52:03.312. (GNSS) MT. FIX: 3d, ehpe 63.90, 6 sats - 43.6166783 7.0660600 ALT=14010
+0d,00:52:04.392. (GNSS) MT. FIX: 3d, ehpe 57.60, 4 sats - 43.6166783 7.0660500 ALT=14000
+0d,00:52:05.393. (GNSS) MT. FIX: 3d, ehpe 47.80, 5 sats - 43.6165466 7.0663983 ALT=13150
+0d,00:52:06.383. (GNSS) MT. FIX: 3d, ehpe 46.20, 4 sats - 43.6165633 7.0663600 ALT=13370
+0d,00:52:07.393. (GNSS) MT. FIX: 3d, ehpe 45.20, 4 sats - 43.6165750 7.0663266 ALT=13530
+0d,00:52:08.392. (GNSS) MT. FIX: 3d, ehpe 42.80, 5 sats - 43.6165466 7.0664283 ALT=13420
+0d,00:52:09.389. (GNSS) MT. FIX: 3d, ehpe 42.40, 4 sats - 43.6165600 7.0664000 ALT=13520
+0d,00:52:10.399. (GNSS) MT. FIX: 3d, ehpe 41.00, 5 sats - 43.6165350 7.0665033 ALT=13510
+0d,00:52:11.393. (GNSS) MT. FIX: 3d, ehpe 40.20, 5 sats - 43.6165283 7.0665650 ALT=13600
+0d,00:52:12.396. (GNSS) MT. FIX: 3d, ehpe 39.80, 4 sats - 43.6165283 7.0666066 ALT=13710
+0d,00:52:13.312. (GNSS) MT. FIX: 3d, ehpe 39.70, 6 sats - 43.6165083 7.0666233 ALT=13500
+0d,00:52:14.318. (GNSS) MT. FIX: 3d, ehpe 38.50, 6 sats - 43.6164950 7.0666300 ALT=13320
+0d,00:52:15.407. (GNSS) MT. FIX: 3d, ehpe 38.30, 5 sats - 43.6164983 7.0666450 ALT=13380
+0d,00:52:16.328. (GNSS) MT. FIX: 3d, ehpe 38.10, 7 sats - 43.6165033 7.0666533 ALT=13400
+0d,00:52:17.405. (GNSS) MT. FIX: 3d, ehpe 37.90, 6 sats - 43.6165016 7.0666716 ALT=13580
+0d,00:52:18.304. (GNSS) MT. FIX: 3d, ehpe 37.60, 6 sats - 43.6164933 7.0666733 ALT=13440
+0d,00:52:19.321. (GNSS) MT. FIX: 3d, ehpe 37.70, 7 sats - 43.6164916 7.0666900 ALT=13470
+0d,00:52:20.398. (GNSS) MT. FIX: 3d, ehpe 37.80, 6 sats - 43.6164916 7.0667066 ALT=13510
+0d,00:52:21.325. (GNSS) MT. FIX: 3d, ehpe 37.70, 8 sats - 43.6164766 7.0667166 ALT=13410
+0d,00:52:21.325. (GNSS) MT. Convergence timeout:20s
+0d,00:52:21.326. (GEO) MT GNSS result type gnss, status: success
+0d,00:52:21.326. (GNSS) MT. GNSS fix complete
+0d,00:52:21.327. (GNSS) MT. RF switch event: released
+0d,00:52:21.327. (GNSS) MT. Set power to standby
+0d,00:52:21.328. (GEO) Geolocation results. Nb techno: 2
+0d,00:52:21.328. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:52:21.329. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:52:21.330. (APP) EVT. got event class: geolocation, type: done
+0d,00:52:21.330. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:52:21.331. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:52:21.331. (APP) EVT. got event class: geolocation, type: complete
+0d,00:52:21.332. (GNSS) MT. Started
+0d,00:52:21.333. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:52:21.338. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:52:21.341. (LORA) TX request status: success
+0d,00:52:21.342. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 18 77 00 84 00 04 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e bf ac 23 3f 28 70 46 b1 ac 23 3f 2a f7 6a ad 
+0d,00:52:21.344. (LORA) TX queued
+0d,00:52:21.344. (LORA) TX queued
+0d,00:52:22.816. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:52:23.486. (GNSS) MT. Set power to standby
+0d,00:52:26.182. (LORA) RX LoRa event: TX success
+0d,00:52:26.198. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:52:26.198. (LORA) TX request status: success
+0d,00:52:26.199. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 18 77 11 8a 00 04 19 ff 59 45 04 36 49 ed 00 86 04 a7 00 12 25 66 
+0d,00:52:31.602. (LORA) RX LoRa event: TX success
+0d,00:52:31.603. (LORA) TX. No buffer to send
+0d,00:52:41.449. (APP) EVT. got event class: geolocation, type: geoloc timeout acq
+0d,00:52:41.449. (APP) GEO-MGR. FSM state: wait-timer, event: timeout, next state: acquiring
+0d,00:52:41.450. (BLE) Scan. RF switch event: acquired
+0d,00:52:41.451. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:52:41.452. (GEO) Start techno ble scan1 success
+0d,00:52:41.452. (GEO) Start techno ble scan1 success
+n, type: start
+0d,00:52:44.624. (BLE) Scan done
+0d,00:52:44.625. (BLE) Scan. RF switch event: released
+0d,00:52:44.626. (GEO) BLE result status: success
+0d,00:52:44.627. (GNSS) MT. RF switch event: acquired
+0d,00:52:44.628. (GNSS) MT. Started
+0d,00:52:44.629. (GEO) Start techno gnss success
+0d,00:52:45.162. (GNSS) MT. Clearing previous data
+0d,00:52:46.057. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 32/30 22/0 
+0d,00:52:46.060. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/30 
+0d,00:52:46.061. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:47.184. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/25 3/29 21/0 17/0 4/28 19/0 28/0 40/0 32/30 22/0 
+0d,00:52:47.187. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/30 
+0d,00:52:47.188. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:48.131. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/24 3/32 21/0 17/0 4/29 19/0 28/0 40/0 32/30 22/0 
+0d,00:52:48.134. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/32 
+0d,00:52:48.135. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:49.170. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/25 3/32 21/0 17/23 4/30 19/0 28/25 40/0 32/29 22/0 
+0d,00:52:49.173. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/32 
+0d,00:52:49.174. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:52:49.265. (GNSS) MT. TTFF in 5s
+0d,00:52:49.266. (GNSS) MT. Setting system time to 6/21/2024 13:45:34
+0d,00:52:49.266. (GNSS) MT. FIX: 3d, ehpe 65.80, 6 sats - 43.6164383 7.0668733 ALT=13030
+0d,00:52:50.284. (GNSS) MT. FIX: 3d, ehpe 52.00, 8 sats - 43.6164283 7.0669733 ALT=13790
+0d,00:52:51.283. (GNSS) MT. FIX: 3d, ehpe 43.90, 8 sats - 43.6164400 7.0668900 ALT=13210
+0d,00:52:52.295. (GNSS) MT. FIX: 3d, ehpe 38.60, 8 sats - 43.6164316 7.0669316 ALT=13250
+0d,00:52:53.302. (GNSS) MT. FIX: 3d, ehpe 35.60, 8 sats - 43.6164250 7.0669616 ALT=13340
+0d,00:52:54.310. (GNSS) MT. FIX: 3d, ehpe 33.50, 8 sats - 43.6164216 7.0669733 ALT=13300
+0d,00:52:55.309. (GNSS) MT. FIX: 3d, ehpe 32.30, 8 sats - 43.6164183 7.0669916 ALT=13380
+0d,00:52:56.311. (GNSS) MT. FIX: 3d, ehpe 31.60, 8 sats - 43.6164133 7.0670000 ALT=13340
+0d,00:52:57.302. (GNSS) MT. FIX: 3d, ehpe 30.90, 8 sats - 43.6164100 7.0670066 ALT=13350
+0d,00:52:58.303. (GNSS) MT. FIX: 3d, ehpe 30.40, 8 sats - 43.6164066 7.0670166 ALT=13370
+0d,00:52:59.302. (GNSS) MT. FIX: 3d, ehpe 30.00, 8 sats - 43.6164050 7.0670233 ALT=13380
+0d,00:52:59.302. (GNSS) MT. Acceptable EHPE:3000, target<3000 time:10s
+0d,00:52:59.303. (GEO) MT GNSS result type gnss, status: success
+0d,00:52:59.303. (GNSS) MT. GNSS fix complete
+0d,00:52:59.304. (GNSS) MT. RF switch event: released
+0d,00:52:59.304. (GNSS) MT. Set power to standby
+0d,00:52:59.305. (GEO) Geolocation results. Nb techno: 2
+0d,00:52:59.305. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:52:59.306. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:52:59.307. (APP) EVT. got event class: geolocation, type: done
+0d,00:52:59.307. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:52:59.308. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:52:59.308. (APP) GEO-MGR. FSM state: wait-timer, event: complete, next state: idle
+0d,00:52:59.309. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,00:52:59.310. (APP) EVT. got event class: geolocation, type: complete
+0d,00:52:59.311. (GNSS) MT. Started
+0d,00:52:59.311. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:52:59.321. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:52:59.324. (LORA) TX request status: success
+0d,00:52:59.325. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 18 b8 20 84 00 04 ac 23 3f 52 bf 27 cb ac 23 3f 2a f7 6e bf ac 23 3f 2a f7 6a ae ac 23 3f 28 70 46 ae 
+0d,00:52:59.327. (LORA) TX queued
+0d,00:52:59.327. (LORA) TX queued
+0d,00:53:00.806. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:53:01.445. (GNSS) MT. Set power to standby
+0d,00:53:10.737. (LORA) RX LoRa event: TX success
+0d,00:53:10.738. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:53:10.738. (LORA) TX request status: success
+0d,00:53:10.739. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 18 b8 31 8a 00 04 19 ff 55 d2 04 36 57 99 00 85 0a bf 00 02 1e 68 
+0d,00:53:15.186. (LORA) RX LoRa event: TX success
+0d,00:53:15.187. (LORA) TX. No buffer to send
+
+super> 
+super> 
+super> 
+super> super> sys eve 3 0
+Sending event. Class: accelerometer, type: motion start
+0d,00:54:28.986. (APP) EVT. got event class: accelerometer, type: motion start
+0d,00:54:28.987. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x4. Cur prio: -1, New_prio: 1. New_prof: 0, to: -1
+0d,00:54:28.988. (APP) GEO-MGR. FSM state: idle, event: start, next state: acquiring
+0d,00:54:28.989. (BLE) Scan. RF switch event: acquired
+0d,00:54:28.989. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:54:28.990. (GEO) Start techno ble scan1 success
+0d,00:54:28.990. (APP) GEO-MGR. Event periodic not relevant for state acquiring
+0d,00:54:28.991. (APP) EVT. got event class: geolocation, type: start
+OK
+super> 0d,00:54:32.170. (BLE) Scan done
+0d,00:54:32.173. (BLE) Scan. RF switch event: released
+0d,00:54:32.174. (GEO) BLE result status: success
+0d,00:54:32.175. (GNSS) MT. RF switch event: acquired
+0d,00:54:32.176. (GNSS) MT. Started
+0d,00:54:32.177. (GEO) Start techno gnss success
+0d,00:54:33.171. (GNSS) MT. Clearing previous data
+0d,00:54:34.047. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 32/0 22/0 
+0d,00:54:34.051. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 67/0 68/31 
+0d,00:54:34.052. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:54:35.173. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/23 3/0 21/24 17/0 37/0 4/25 19/0 28/25 32/33 22/0 
+0d,00:54:35.177. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 67/0 68/35 
+0d,00:54:35.179. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:54:36.180. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/24 3/0 21/24 17/0 37/0 4/24 19/0 28/26 32/32 22/0 
+0d,00:54:36.184. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 67/0 68/35 
+0d,00:54:36.186. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:54:36.275. (GNSS) MT. TTFF in 4s
+0d,00:54:36.275. (GNSS) MT. Setting system time to 6/21/2024 13:47:21
+0d,00:54:36.276. (GNSS) MT. FIX: 3d, ehpe 99.30, 5 sats - 43.6167283 7.0658383 ALT=14280
+0d,00:54:37.295. (GNSS) MT. FIX: 3d, ehpe 73.30, 5 sats - 43.6167366 7.0657900 ALT=14740
+0d,00:54:38.407. (GNSS) MT. FIX: 3d, ehpe 50.50, 7 sats - 43.6164250 7.0666150 ALT=13140
+0d,00:54:39.379. (GNSS) MT. FIX: 3d, ehpe 44.80, 7 sats - 43.6164533 7.0665283 ALT=13290
+0d,00:54:40.366. (GNSS) MT. FIX: 3d, ehpe 41.10, 7 sats - 43.6164583 7.0665583 ALT=13150
+0d,00:54:41.371. (GNSS) MT. FIX: 3d, ehpe 38.80, 7 sats - 43.6164516 7.0665683 ALT=13290
+0d,00:54:42.372. (GNSS) MT. FIX: 3d, ehpe 37.00, 7 sats - 43.6164466 7.0665766 ALT=13310
+0d,00:54:43.372. (GNSS) MT. FIX: 3d, ehpe 35.90, 7 sats - 43.6164400 7.0665833 ALT=13380
+0d,00:54:44.402. (GNSS) MT. FIX: 3d, ehpe 27.20, 7 sats - 43.6164450 7.0665800 ALT=13340
+0d,00:54:44.403. (GNSS) MT. Acceptable EHPE:2720, target<3000 time:8s
+0d,00:54:44.403. (GEO) MT GNSS result type gnss, status: success
+0d,00:54:44.404. (GNSS) MT. GNSS fix complete
+0d,00:54:44.404. (GNSS) MT. RF switch event: released
+0d,00:54:44.405. (GNSS) MT. Set power to standby
+0d,00:54:44.405. (GEO) Geolocation results. Nb techno: 2
+0d,00:54:44.405. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:54:44.406. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:54:44.407. (APP) EVT. got event class: geolocation, type: done
+0d,00:54:44.407. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:54:44.408. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:54:44.409. (APP) EVT. got event class: geolocation, type: complete
+0d,00:54:44.410. (GNSS) MT. Started
+0d,00:54:44.410. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:54:44.417. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:54:44.421. (LORA) TX request status: success
+0d,00:54:44.421. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 24 40 84 00 04 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e c0 ac 23 3f 28 70 46 ac ac 23 3f 2a f7 6a ab 
+0d,00:54:44.423. (LORA) TX queued
+0d,00:54:44.423. (LORA) TX queued
+0d,00:54:45.926. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:54:46.585. (GNSS) MT. Set power to standby
+0d,00:54:50.510. (LORA) RX LoRa event: TX success
+0d,00:54:50.510. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:54:50.511. (LORA) TX request status: success
+0d,00:54:50.511. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 24 51 8a 00 04 19 ff 57 62 04 36 46 48 00 85 04 80 00 1c 1b 67 
+0d,00:54:57.178. (LORA) RX LoRa event: TX success
+0d,00:54:57.179. (LORA) TX. No buffer to send
+0d,00:55:04.520. (APP) EVT. got event class: geolocation, type: geoloc timeout acq
+0d,00:55:04.520. (APP) GEO-MGR. FSM state: wait-timer, event: timeout, next state: acquiring
+0d,00:55:04.521. (BLE) Scan. RF switch event: acquired
+0d,00:55:04.522. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:55:04.523. (GEO) Start techno ble scan1 success
+0d,00:55:04.523. (GEO) Start techno ble scan1 success
+n, type: start
+0d,00:55:07.257. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:55:07.761. (APP) PWR. Battery remaining: 100%. Consumption: 0.557 mAh
+0d,00:55:07.898. (BLE) Scan done
+0d,00:55:07.899. (BLE) Scan. RF switch event: released
+0d,00:55:07.899. (GEO) BLE result status: success
+0d,00:55:07.900. (GNSS) MT. RF switch event: acquired
+0d,00:55:07.900. (GNSS) MT. Started
+0d,00:55:07.901. (GEO) Start techno gnss success
+0d,00:55:08.162. (GNSS) MT. Clearing previous data
+0d,00:55:09.039. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 32/0 22/0 
+0d,00:55:09.042. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:55:09.043. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:55:10.063. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 32/30 22/0 
+0d,00:55:10.065. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:55:10.067. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:55:11.140. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/21 3/0 21/0 17/18 4/20 19/0 28/0 32/31 22/0 
+0d,00:55:11.143. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:55:11.144. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:55:12.180. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/22 3/27 21/0 17/20 33/0 4/20 19/0 28/0 32/30 22/0 
+0d,00:55:12.182. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:55:12.184. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:55:12.273. (GNSS) MT. TTFF in 5s
+0d,00:55:12.273. (GNSS) MT. Setting system time to 6/21/2024 13:47:57
+0d,00:55:12.274. (GNSS) MT. FIX: 3d, ehpe 65.80, 5 sats - 43.6162433 7.0667133 ALT=9700
+0d,00:55:13.372. (GNSS) MT. FIX: 3d, ehpe 50.40, 6 sats - 43.6164300 7.0666783 ALT=11270
+0d,00:55:14.387. (GNSS) MT. FIX: 3d, ehpe 46.40, 6 sats - 43.6163800 7.0667000 ALT=11730
+0d,00:55:15.371. (GNSS) MT. FIX: 3d, ehpe 43.70, 6 sats - 43.6164283 7.0666750 ALT=12330
+0d,00:55:16.243. (GNSS) MT. FIX: 3d, ehpe 42.10, 5 sats - 43.6164250 7.0666600 ALT=12370
+0d,00:55:17.280. (GNSS) MT. FIX: 3d, ehpe 40.70, 5 sats - 43.6164283 7.0666500 ALT=12450
+0d,00:55:18.345. (GNSS) MT. FIX: 3d, ehpe 39.50, 6 sats - 43.6164233 7.0666700 ALT=12480
+0d,00:55:19.365. (GNSS) MT. FIX: 3d, ehpe 38.40, 6 sats - 43.6164166 7.0666900 ALT=12480
+0d,00:55:20.365. (GNSS) MT. FIX: 3d, ehpe 37.60, 6 sats - 43.6164116 7.0667066 ALT=12460
+0d,00:55:21.382. (GNSS) MT. FIX: 3d, ehpe 36.90, 6 sats - 43.6164083 7.0667200 ALT=12450
+0d,00:55:22.419. (GNSS) MT. FIX: 3d, ehpe 36.30, 7 sats - 43.6164033 7.0667450 ALT=12480
+0d,00:55:23.381. (GNSS) MT. FIX: 3d, ehpe 35.50, 7 sats - 43.6163983 7.0667600 ALT=12530
+0d,00:55:24.421. (GNSS) MT. FIX: 3d, ehpe 34.90, 7 sats - 43.6163966 7.0667733 ALT=12560
+0d,00:55:25.422. (GNSS) MT. FIX: 3d, ehpe 34.40, 7 sats - 43.6163966 7.0667750 ALT=12600
+0d,00:55:26.422. (GNSS) MT. FIX: 3d, ehpe 34.00, 7 sats - 43.6163950 7.0667866 ALT=12670
+0d,00:55:27.429. (GNSS) MT. FIX: 3d, ehpe 35.80, 7 sats - 43.6163933 7.0667916 ALT=12680
+0d,00:55:28.417. (GNSS) MT. FIX: 3d, ehpe 35.30, 7 sats - 43.6163966 7.0667900 ALT=12640
+0d,00:55:29.422. (GNSS) MT. FIX: 3d, ehpe 35.10, 7 sats - 43.6163966 7.0667866 ALT=12610
+0d,00:55:30.381. (GNSS) MT. FIX: 3d, ehpe 34.80, 7 sats - 43.6163950 7.0667900 ALT=12620
+0d,00:55:31.388. (GNSS) MT. FIX: 3d, ehpe 34.50, 7 sats - 43.6163883 7.0667983 ALT=12600
+0d,00:55:32.373. (GNSS) MT. FIX: 3d, ehpe 34.40, 7 sats - 43.6163850 7.0668050 ALT=12600
+0d,00:55:32.374. (GNSS) MT. Convergence timeout:20s
+0d,00:55:32.374. (GEO) MT GNSS result type gnss, status: success
+0d,00:55:32.375. (GNSS) MT. GNSS fix complete
+0d,00:55:32.375. (GNSS) MT. RF switch event: released
+0d,00:55:32.376. (GNSS) MT. Set power to standby
+0d,00:55:32.376. (GEO) Geolocation results. Nb techno: 2
+0d,00:55:32.377. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:55:32.377. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:55:32.378. (APP) EVT. got event class: geolocation, type: done
+0d,00:55:32.378. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:55:32.379. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:55:32.380. (APP) GEO-MGR. FSM state: wait-timer, event: complete, next state: idle
+0d,00:55:32.380. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,00:55:32.381. (APP) EVT. got event class: geolocation, type: complete
+0d,00:55:32.382. (GNSS) MT. Started
+0d,00:55:32.383. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:55:32.384. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:55:32.388. (LORA) TX request status: success
+0d,00:55:32.388. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 48 60 84 00 04 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e bf ac 23 3f 28 70 46 ae ac 23 3f 2a f7 6a a8 
+0d,00:55:32.390. (LORA) TX queued
+0d,00:55:32.391. (LORA) TX queued
+0d,00:55:33.846. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:55:34.515. (GNSS) MT. Set power to standby
+0d,00:55:38.850. (LORA) RX LoRa event: TX success
+0d,00:55:38.850. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:55:38.851. (LORA) TX request status: success
+0d,00:55:38.851. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 48 71 8a 00 04 19 ff 55 6e 04 36 4e 5a 00 7e 05 aa 00 06 22 67 
+0d,00:55:43.378. (LORA) RX LoRa event: TX success
+0d,00:55:43.378. (LORA) TX. No buffer to send
+
+super> 
+super> 
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   2          (0x00000002)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   3          (0x00000003)
+ 0x0205    5     geoloc_start_stop_period     Integer   20         (0x00000014)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   12         (0x0000000c)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {83,86,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> super> conf sh gr 2            sys eve 3 0
+Sending event. Class: accelerometer, type: motion start
+0d,00:57:17.594. (APP) EVT. got event class: accelerometer, type: motion start
+0d,00:57:17.595. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x4. Cur prio: -1, New_prio: 1. New_prof: 0, to: -1
+0d,00:57:17.596. (APP) GEO-MGR. FSM state: idle, event: start, next state: acquiring
+0d,00:57:17.597. (BLE) Scan. RF switch event: acquired
+0d,00:57:17.597. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:57:17.598. (GEO) Start techno ble scan1 success
+0d,00:57:17.598. (APP) GEO-MGR. Event periodic not relevant for state acquiring
+0d,00:57:17.599. (APP) EVT. got event class: geolocation, type: start
+OK
+super> 0d,00:57:20.773. (BLE) Scan done
+0d,00:57:20.776. (BLE) Scan. RF switch event: released
+0d,00:57:20.777. (GEO) BLE result status: success
+0d,00:57:20.778. (GNSS) MT. RF switch event: acquired
+0d,00:57:20.780. (GNSS) MT. Started
+0d,00:57:20.781. (GEO) Start techno gnss success
+0d,00:57:21.131. (GNSS) MT. Clearing previous data
+0d,00:57:22.041. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 22/0 32/0 
+0d,00:57:22.043. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:57:22.045. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:23.062. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/28 22/0 32/0 
+0d,00:57:23.066. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:23.067. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:24.092. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/31 3/0 21/0 17/0 4/26 19/0 28/30 22/0 32/0 
+0d,00:57:24.096. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:24.097. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:25.099. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/29 3/0 21/0 17/0 4/25 19/0 28/30 22/0 32/25 
+0d,00:57:25.102. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:25.103. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:26.201. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/29 3/0 21/0 17/0 4/27 19/0 28/30 22/0 32/26 34/0 
+0d,00:57:26.204. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:26.206. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:27.190. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/30 3/0 21/0 17/0 4/25 19/0 28/30 22/0 32/27 34/0 
+0d,00:57:27.193. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:27.195. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:28.211. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/29 3/0 21/0 17/0 4/25 19/0 28/30 22/0 32/27 34/0 
+0d,00:57:28.214. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 82/0 
+0d,00:57:28.215. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:57:28.296. (GNSS) MT. TTFF in 8s
+0d,00:57:28.297. (GNSS) MT. Setting system time to 6/21/2024 13:50:13
+0d,00:57:28.297. (GNSS) MT. FIX: 3d, ehpe 69.00, 4 sats - 43.6168650 7.0656966 ALT=17490
+0d,00:57:29.268. (GNSS) MT. FIX: 3d, ehpe 57.60, 4 sats - 43.6167050 7.0660566 ALT=18630
+0d,00:57:30.288. (GNSS) MT. FIX: 3d, ehpe 54.10, 5 sats - 43.6167416 7.0659950 ALT=18400
+0d,00:57:31.293. (GNSS) MT. FIX: 3d, ehpe 48.30, 5 sats - 43.6166933 7.0661266 ALT=18520
+0d,00:57:32.295. (GNSS) MT. FIX: 3d, ehpe 45.70, 5 sats - 43.6166650 7.0662000 ALT=18600
+0d,00:57:33.288. (GNSS) MT. FIX: 3d, ehpe 43.80, 5 sats - 43.6166433 7.0662583 ALT=18670
+0d,00:57:34.255. (GNSS) MT. FIX: 3d, ehpe 39.40, 5 sats - 43.6165716 7.0663350 ALT=18740
+0d,00:57:35.202. (GNSS) MT. FIX: 3d, ehpe 37.50, 5 sats - 43.6165283 7.0663783 ALT=18800
+0d,00:57:36.192. (GNSS) MT. FIX: 3d, ehpe 36.70, 5 sats - 43.6165016 7.0663983 ALT=18860
+0d,00:57:37.207. (GNSS) MT. FIX: 3d, ehpe 35.90, 5 sats - 43.6164800 7.0664100 ALT=18870
+0d,00:57:38.195. (GNSS) MT. FIX: 3d, ehpe 35.40, 5 sats - 43.6164666 7.0664250 ALT=18870
+0d,00:57:39.204. (GNSS) MT. FIX: 3d, ehpe 35.00, 5 sats - 43.6164533 7.0664366 ALT=18870
+0d,00:57:40.204. (GNSS) MT. FIX: 3d, ehpe 34.90, 5 sats - 43.6164383 7.0664466 ALT=18870
+0d,00:57:41.210. (GNSS) MT. FIX: 3d, ehpe 34.20, 5 sats - 43.6164283 7.0664516 ALT=18850
+0d,00:57:42.208. (GNSS) MT. FIX: 3d, ehpe 33.80, 5 sats - 43.6164200 7.0664550 ALT=18800
+0d,00:57:43.195. (GNSS) MT. FIX: 3d, ehpe 33.50, 5 sats - 43.6164100 7.0664633 ALT=18790
+0d,00:57:44.194. (GNSS) MT. FIX: 3d, ehpe 33.30, 5 sats - 43.6164066 7.0664650 ALT=18770
+0d,00:57:45.204. (GNSS) MT. FIX: 3d, ehpe 32.70, 5 sats - 43.6164016 7.0664666 ALT=18740
+0d,00:57:46.198. (GNSS) MT. FIX: 3d, ehpe 32.80, 5 sats - 43.6163966 7.0664683 ALT=18720
+0d,00:57:47.197. (GNSS) MT. FIX: 3d, ehpe 32.40, 5 sats - 43.6163916 7.0664683 ALT=18700
+0d,00:57:48.193. (GNSS) MT. FIX: 3d, ehpe 32.10, 5 sats - 43.6163866 7.0664700 ALT=18700
+0d,00:57:48.193. (GNSS) MT. Convergence timeout:20s
+0d,00:57:48.194. (GEO) MT GNSS result type gnss, status: success
+0d,00:57:48.194. (GNSS) MT. GNSS fix complete
+0d,00:57:48.195. (GNSS) MT. RF switch event: released
+0d,00:57:48.195. (GNSS) MT. Set power to standby
+0d,00:57:48.195. (GEO) Geolocation results. Nb techno: 2
+0d,00:57:48.196. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:57:48.197. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:57:48.197. (APP) EVT. got event class: geolocation, type: done
+0d,00:57:48.198. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:57:48.198. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:57:48.199. (APP) EVT. got event class: geolocation, type: complete
+0d,00:57:48.200. (GNSS) MT. Started
+0d,00:57:48.200. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:57:48.201. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:57:48.205. (LORA) TX request status: success
+0d,00:57:48.206. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 cd 80 84 00 04 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e bf ac 23 3f 28 70 46 b1 ac 23 3f 2a f7 6a af 
+0d,00:57:48.208. (LORA) TX queued
+0d,00:57:48.208. (LORA) TX queued
+0d,00:57:50.376. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:57:51.437. (GNSS) MT. Set power to standby
+0d,00:57:54.322. (LORA) RX LoRa event: TX success
+0d,00:57:54.322. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:57:54.323. (LORA) TX request status: success
+0d,00:57:54.324. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 19 cd 91 8a 00 04 19 ff 55 1a 04 36 41 fc 00 bb 0d b0 00 11 20 65 
+0d,00:57:59.706. (LORA) RX LoRa event: TX success
+0d,00:57:59.706. (LORA) TX. No buffer to send
+0d,00:58:08.336. (APP) EVT. got event class: geolocation, type: geoloc timeout acq
+0d,00:58:08.336. (APP) GEO-MGR. FSM state: wait-timer, event: timeout, next state: acquiring
+0d,00:58:08.337. (BLE) Scan. RF switch event: acquired
+0d,00:58:08.337. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:58:08.339. (GEO) Start techno ble scan1 success
+0d,00:58:08.339. (GEO) Start techno ble scan1 success
+n, type: start
+0d,00:58:11.501. (BLE) Scan done
+0d,00:58:11.503. (BLE) Scan. RF switch event: released
+0d,00:58:11.504. (GEO) BLE result status: success
+0d,00:58:11.505. (GNSS) MT. RF switch event: acquired
+0d,00:58:11.506. (GNSS) MT. Started
+0d,00:58:11.507. (GEO) Start techno gnss success
+0d,00:58:12.152. (GNSS) MT. Clearing previous data
+0d,00:58:13.056. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/32 3/22 21/0 17/28 4/0 19/0 28/0 22/0 32/0 
+0d,00:58:13.059. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:13.060. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:14.139. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/31 3/20 21/0 17/28 4/25 19/0 28/28 22/0 32/22 38/0 
+0d,00:58:14.141. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:14.143. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:15.284. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/32 3/21 21/22 17/29 4/24 19/0 28/30 22/0 32/23 38/0 
+0d,00:58:15.287. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:15.288. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:15.372. (GNSS) MT. TTFF in 4s
+0d,00:58:15.372. (GNSS) MT. Setting system time to 6/21/2024 13:51:00
+0d,00:58:15.373. (GNSS) MT. FIX: 3d, ehpe 61.70, 7 sats - 43.6164083 7.0664683 ALT=16670
+0d,00:58:16.356. (GNSS) MT. FIX: 3d, ehpe 48.90, 7 sats - 43.6163400 7.0665000 ALT=17280
+0d,00:58:17.356. (GNSS) MT. FIX: 3d, ehpe 43.80, 7 sats - 43.6162983 7.0665133 ALT=16850
+0d,00:58:18.309. (GNSS) MT. FIX: 3d, ehpe 40.50, 6 sats - 43.6162766 7.0665400 ALT=16490
+0d,00:58:19.321. (GNSS) MT. FIX: 3d, ehpe 38.40, 7 sats - 43.6162833 7.0665416 ALT=16500
+0d,00:58:20.343. (GNSS) MT. FIX: 3d, ehpe 36.80, 7 sats - 43.6162900 7.0665350 ALT=16530
+0d,00:58:21.351. (GNSS) MT. FIX: 3d, ehpe 36.00, 7 sats - 43.6162883 7.0665383 ALT=16590
+0d,00:58:22.336. (GNSS) MT. FIX: 3d, ehpe 26.90, 7 sats - 43.6162900 7.0665366 ALT=16580
+0d,00:58:22.337. (GNSS) MT. Acceptable EHPE:2690, target<3000 time:7s
+0d,00:58:22.338. (GEO) MT GNSS result type gnss, status: success
+0d,00:58:22.338. (GNSS) MT. GNSS fix complete
+0d,00:58:22.339. (GNSS) MT. RF switch event: released
+0d,00:58:22.339. (GNSS) MT. Set power to standby
+0d,00:58:22.339. (GEO) Geolocation results. Nb techno: 2
+0d,00:58:22.340. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:58:22.341. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:58:22.341. (APP) EVT. got event class: geolocation, type: done
+0d,00:58:22.342. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:58:22.343. (APP) GEO-MGR. Process result for triggers 0x00000004
+0d,00:58:22.343. (APP) GEO-MGR. FSM state: wait-timer, event: complete, next state: idle
+0d,00:58:22.344. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,00:58:22.345. (APP) EVT. got event class: geolocation, type: complete
+0d,00:58:22.346. (GNSS) MT. Started
+0d,00:58:22.346. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:58:22.355. (LR1110) TX.Size: 36. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:58:22.359. (LORA) TX request status: success
+0d,00:58:22.359. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 1a 00 a0 84 00 04 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e bb ac 23 3f 28 70 46 b1 ac 23 3f 2a f7 6a ae 
+0d,00:58:22.361. (LORA) TX queued
+0d,00:58:22.362. (LORA) TX queued
+0d,00:58:24.375. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:58:24.765. (GNSS) MT. Set power to standby
+0d,00:58:28.215. (LORA) RX LoRa event: TX success
+0d,00:58:28.216. (LR1110) TX.Size: 24. Rqst DR: DR0, Actual: DR0. Actual ADR: no
+0d,00:58:28.216. (LORA) TX request status: success
+0d,00:58:28.217. (LORA) TX (Port: 19, DR 0, TX#1): 90 64 1a 00 b1 8a 00 04 19 ff 51 54 04 36 44 96 00 a5 01 43 00 15 1a 67 
+0d,00:58:33.911. (LORA) RX LoRa event: TX success
+0d,00:58:33.911. (LORA) TX. No buffer to send
+
+super> 
+super> 
+super> sys eve 3 1
+Sending event. Class: accelerometer, type: motion end
+0d,00:58:51.087. (APP) EVT. got event class: accelerometer, type: motion end
+0d,00:58:51.087. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x8. Cur prio: -1, New_prio: 1. New_prof: 0, to: -1
+0d,00:58:51.088. (APP) GEO-MGR. FSM state: idle, event: start, next state: acquiring
+0d,00:58:51.089. (BLE) Scan. RF switch event: acquired
+0d,00:58:51.090. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:58:51.091. (GEO) Start techno ble scan1 success
+0d,00:58:51.090. (APP) GEO-MGR. Event periodic not relevant for state acquiring
+0d,00:58:51.092. (APP) EVT. got event class: geolocation, type: start
+OK
+super> 0d,00:58:54.252. (BLE) Scan done
+0d,00:58:54.253. (BLE) Scan. RF switch event: released
+0d,00:58:54.254. (GEO) BLE result status: success
+0d,00:58:54.255. (GNSS) MT. RF switch event: acquired
+0d,00:58:54.257. (GNSS) MT. Started
+0d,00:58:54.257. (GEO) Start techno gnss success
+0d,00:58:55.161. (GNSS) MT. Clearing previous data
+0d,00:58:56.098. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/33 3/29 21/0 17/23 4/0 19/0 28/0 22/0 32/0 
+0d,00:58:56.100. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:56.102. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:57.151. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/30 21/0 17/23 4/0 19/0 28/23 22/0 32/25 43/0 
+0d,00:58:57.153. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:57.155. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:58.131. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/35 3/30 21/19 17/26 4/0 19/26 28/23 22/0 32/29 43/0 
+0d,00:58:58.134. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:58.135. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:58:59.120. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/30 21/19 17/23 4/0 19/24 28/27 22/0 32/27 43/0 
+0d,00:58:59.123. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:58:59.124. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:00.223. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/29 21/22 17/22 4/0 19/22 28/25 22/0 32/25 43/0 
+0d,00:59:00.226. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:59:00.227. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:01.266. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/33 3/29 21/18 17/23 4/0 19/24 28/25 22/0 32/28 43/0 
+0d,00:59:01.269. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:59:01.270. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:02.174. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/29 21/18 17/24 4/0 19/24 28/26 22/0 32/28 43/0 
+0d,00:59:02.177. (GNSS) MT. TRACK-GLO, Nb sat: 1, 66/0 
+0d,00:59:02.179. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:03.174. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/30 21/16 17/24 4/0 19/22 28/26 22/0 32/28 45/0 
+0d,00:59:03.178. (GNSS) MT. TRACK-GLO, Nb sat: 2, 66/0 68/30 
+0d,00:59:03.179. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:04.272. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/30 21/16 17/24 4/17 19/22 28/26 22/0 32/28 45/0 
+0d,00:59:04.276. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 85/0 68/30 
+0d,00:59:04.277. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:05.260. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/31 21/16 17/24 4/17 19/22 28/26 22/0 32/28 45/0 
+0d,00:59:05.264. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 85/0 68/31 
+0d,00:59:05.265. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:06.261. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/31 21/16 17/24 4/20 19/21 28/26 22/0 32/28 45/0 
+0d,00:59:06.265. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 85/0 68/30 
+0d,00:59:06.266. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:07.277. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/34 3/31 21/16 17/24 4/20 19/21 28/26 22/0 32/28 45/0 
+0d,00:59:07.281. (GNSS) MT. TRACK-GLO, Nb sat: 3, 66/0 85/0 68/30 
+0d,00:59:07.283. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:07.401. (GNSS) MT. TTFF in 13s
+0d,00:59:07.402. (GNSS) MT. Setting system time to 6/21/2024 13:51:52
+0d,00:59:07.402. (GNSS) MT. FIX: 3d, ehpe 93.40, 7 sats - 43.6164800 7.0669450 ALT=13040
+0d,00:59:08.348. (GNSS) MT. FIX: 3d, ehpe 63.70, 7 sats - 43.6163783 7.0668850 ALT=12850
+0d,00:59:09.349. (GNSS) MT. FIX: 3d, ehpe 55.50, 7 sats - 43.6163200 7.0668500 ALT=12730
+0d,00:59:10.349. (GNSS) MT. FIX: 3d, ehpe 50.80, 7 sats - 43.6162916 7.0668250 ALT=12620
+0d,00:59:11.342. (GNSS) MT. FIX: 3d, ehpe 48.00, 7 sats - 43.6162800 7.0668116 ALT=12500
+0d,00:59:12.394. (GNSS) MT. FIX: 3d, ehpe 46.00, 7 sats - 43.6162650 7.0667966 ALT=12500
+0d,00:59:13.395. (GNSS) MT. FIX: 3d, ehpe 44.30, 7 sats - 43.6162550 7.0667866 ALT=12490
+0d,00:59:14.401. (GNSS) MT. FIX: 3d, ehpe 42.90, 7 sats - 43.6162483 7.0667766 ALT=12480
+0d,00:59:15.395. (GNSS) MT. FIX: 3d, ehpe 41.80, 7 sats - 43.6162433 7.0667683 ALT=12440
+0d,00:59:16.394. (GNSS) MT. FIX: 3d, ehpe 40.70, 7 sats - 43.6162400 7.0667650 ALT=12400
+0d,00:59:17.364. (GNSS) MT. FIX: 3d, ehpe 39.00, 7 sats - 43.6162366 7.0667600 ALT=12410
+0d,00:59:18.348. (GNSS) MT. FIX: 3d, ehpe 37.80, 7 sats - 43.6162400 7.0667566 ALT=12390
+0d,00:59:19.342. (GNSS) MT. FIX: 3d, ehpe 37.00, 7 sats - 43.6162350 7.0667483 ALT=12340
+0d,00:59:20.334. (GNSS) MT. FIX: 3d, ehpe 36.30, 7 sats - 43.6162350 7.0667416 ALT=12340
+0d,00:59:21.350. (GNSS) MT. FIX: 3d, ehpe 35.20, 7 sats - 43.6162350 7.0667383 ALT=12360
+0d,00:59:22.338. (GNSS) MT. FIX: 3d, ehpe 34.90, 7 sats - 43.6162333 7.0667350 ALT=12390
+0d,00:59:23.351. (GNSS) MT. FIX: 3d, ehpe 34.40, 7 sats - 43.6162350 7.0667333 ALT=12410
+0d,00:59:24.364. (GNSS) MT. FIX: 3d, ehpe 33.70, 7 sats - 43.6162366 7.0667333 ALT=12430
+0d,00:59:25.400. (GNSS) MT. FIX: 3d, ehpe 24.90, 9 sats - 43.6161700 7.0666433 ALT=13650
+0d,00:59:25.401. (GNSS) MT. Acceptable EHPE:2490, target<3000 time:18s
+0d,00:59:25.402. (GEO) MT GNSS result type gnss, status: success
+0d,00:59:25.402. (GNSS) MT. GNSS fix complete
+0d,00:59:25.402. (GNSS) MT. RF switch event: released
+0d,00:59:25.403. (GNSS) MT. Set power to standby
+0d,00:59:25.403. (GEO) Geolocation results. Nb techno: 2
+0d,00:59:25.404. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:59:25.405. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:59:25.405. (APP) EVT. got event class: geolocation, type: done
+0d,00:59:25.406. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:59:25.406. (APP) GEO-MGR. Process result for triggers 0x00000008
+0d,00:59:25.407. (APP) EVT. got event class: geolocation, type: complete
+0d,00:59:25.408. (GNSS) MT. Started
+0d,00:59:25.408. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:59:25.409. (LR1110) TX.Size: 36. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:59:25.413. (LORA) TX request status: success
+0d,00:59:25.413. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 2a c0 84 00 08 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e c0 ac 23 3f 2a f7 6a b0 ac 23 3f 28 70 46 b0 
+0d,00:59:25.415. (LORA) TX queued
+0d,00:59:25.416. (LORA) TX queued
+0d,00:59:27.407. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:59:27.805. (GNSS) MT. Set power to standby
+0d,00:59:31.242. (LORA) RX LoRa event: TX success
+0d,00:59:31.243. (LR1110) TX.Size: 24. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:59:31.244. (LORA) TX request status: success
+0d,00:59:31.244. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 2a d1 8a 00 08 19 ff 4c a4 04 36 48 c1 00 88 02 b8 00 06 18 69 
+0d,00:59:38.097. (LORA) RX LoRa event: TX success
+0d,00:59:38.098. (LORA) TX. No buffer to send
+0d,00:59:45.545. (APP) EVT. got event class: geolocation, type: geoloc timeout acq
+0d,00:59:45.545. (APP) GEO-MGR. FSM state: wait-timer, event: timeout, next state: acquiring
+0d,00:59:45.546. (BLE) Scan. RF switch event: acquired
+0d,00:59:45.546. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,00:59:45.548. (GEO) Start techno ble scan1 success
+0d,00:59:45.548. (GEO) Start techno ble scan1 success
+n, type: start
+0d,00:59:48.674. (BLE) Scan done
+0d,00:59:48.676. (BLE) Scan. RF switch event: released
+0d,00:59:48.677. (GEO) BLE result status: success
+0d,00:59:48.678. (GNSS) MT. RF switch event: acquired
+0d,00:59:48.680. (GNSS) MT. Started
+0d,00:59:48.680. (GEO) Start techno gnss success
+0d,00:59:49.182. (GNSS) MT. Clearing previous data
+0d,00:59:50.058. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/0 22/0 32/0 
+0d,00:59:50.063. (GNSS) MT. TRACK-GLO, Nb sat: 3, 68/31 81/0 66/0 
+0d,00:59:50.064. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:51.247. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/30 3/28 21/24 17/23 37/0 4/28 19/0 28/28 22/0 32/25 
+0d,00:59:51.252. (GNSS) MT. TRACK-GLO, Nb sat: 3, 68/31 81/0 66/29 
+0d,00:59:51.254. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:52.288. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/31 3/29 21/27 17/26 37/0 4/30 19/0 28/32 22/0 32/25 
+0d,00:59:52.293. (GNSS) MT. TRACK-GLO, Nb sat: 3, 68/29 81/0 66/29 
+0d,00:59:52.295. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,00:59:52.424. (GNSS) MT. TTFF in 4s
+0d,00:59:52.424. (GNSS) MT. Setting system time to 6/21/2024 13:52:37
+0d,00:59:52.425. (GNSS) MT. FIX: 3d, ehpe 47.00, 9 sats - 43.6161566 7.0665583 ALT=16360
+0d,00:59:53.389. (GNSS) MT. FIX: 3d, ehpe 35.30, 9 sats - 43.6161300 7.0665283 ALT=16080
+0d,00:59:54.423. (GNSS) MT. FIX: 3d, ehpe 29.80, 9 sats - 43.6161466 7.0665716 ALT=16980
+0d,00:59:54.423. (GNSS) MT. Acceptable EHPE:2980, target<3000 time:2s
+0d,00:59:54.424. (GEO) MT GNSS result type gnss, status: success
+0d,00:59:54.424. (GNSS) MT. GNSS fix complete
+0d,00:59:54.425. (GNSS) MT. RF switch event: released
+0d,00:59:54.425. (GNSS) MT. Set power to standby
+0d,00:59:54.426. (GEO) Geolocation results. Nb techno: 2
+0d,00:59:54.426. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,00:59:54.427. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,00:59:54.428. (APP) EVT. got event class: geolocation, type: done
+0d,00:59:54.428. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,00:59:54.429. (APP) GEO-MGR. Process result for triggers 0x00000008
+0d,00:59:54.429. (APP) EVT. got event class: geolocation, type: complete
+0d,00:59:54.430. (GNSS) MT. Started
+0d,00:59:54.431. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:59:54.431. (LR1110) TX.Size: 36. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:59:54.435. (LORA) TX request status: success
+0d,00:59:54.436. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 61 e0 04 00 08 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e c0 ac 23 3f 2a f7 66 b0 ac 23 3f 28 70 46 b0 
+0d,00:59:54.438. (LORA) TX queued
+0d,00:59:54.438. (LORA) TX queued
+0d,00:59:55.836. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:59:56.515. (GNSS) MT. Set power to standby
+0d,01:00:00.058. (LORA) RX LoRa event: TX success
+0d,01:00:00.059. (LR1110) TX.Size: 24. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,01:00:00.059. (LORA) TX request status: success
+0d,01:00:00.060. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 61 f1 0a 00 08 19 ff 4b ba 04 36 45 f4 00 a9 09 af 00 10 1d 69 
+0d,01:00:05.634. (LORA) RX LoRa event: TX success
+0d,01:00:05.635. (LORA) TX. No buffer to send
+0d,01:00:10.453. (APP) EVT. got event class: core, type: Device monitoring
+0d,01:00:10.454. (APP) DEV. Temp:31, new high: no, new low: no
+0d,01:00:10.493. (APP) PWR. Battery remaining: 100%. Consumption: 1.279 mAh
+0d,01:00:14.576. (APP) EVT. got event class: geolocation, type: geoloc timeout acq
+0d,01:00:14.577. (APP) GEO-MGR. FSM state: wait-timer, event: timeout, next state: acquiring
+0d,01:00:14.577. (BLE) Scan. RF switch event: acquired
+0d,01:00:14.578. (BLE) Scan request interval: 130, window: 120, duration: 3000
+0d,01:00:14.579. (GEO) Start techno ble scan1 success
+0d,01:00:14.579. (GEO) Start techno ble scan1 success
+n, type: start
+0d,01:00:17.726. (BLE) Scan done
+0d,01:00:17.728. (BLE) Scan. RF switch event: released
+0d,01:00:17.730. (GEO) BLE result status: success
+0d,01:00:17.730. (GNSS) MT. RF switch event: acquired
+0d,01:00:17.732. (GNSS) MT. Started
+0d,01:00:17.733. (GEO) Start techno gnss success
+0d,01:00:18.201. (GNSS) MT. Clearing previous data
+0d,01:00:19.084. (GNSS) MT. TRACK-GPS, Nb sat: 9, 2/0 3/0 21/0 17/0 4/0 19/0 28/32 22/0 32/26 
+0d,01:00:19.089. (GNSS) MT. TRACK-GLO, Nb sat: 3, 68/25 81/18 66/32 
+0d,01:00:19.091. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,01:00:20.202. (GNSS) MT. TRACK-GPS, Nb sat: 10, 2/30 3/0 21/0 17/0 39/0 4/0 19/23 28/30 22/0 32/26 
+0d,01:00:20.207. (GNSS) MT. TRACK-GLO, Nb sat: 3, 68/27 81/22 66/33 
+0d,01:00:20.208. (GNSS) MT. TRACK-GAL, Nb sat: 0, 
+0d,01:00:20.322. (GNSS) MT. TTFF in 3s
+0d,01:00:20.323. (GNSS) MT. Setting system time to 6/21/2024 13:53:05
+0d,01:00:20.323. (GNSS) MT. FIX: 3d, ehpe 62.70, 6 sats - 43.6158716 7.0662900 ALT=11800
+0d,01:00:21.343. (GNSS) MT. FIX: 3d, ehpe 45.50, 7 sats - 43.6158666 7.0662783 ALT=11890
+0d,01:00:22.366. (GNSS) MT. FIX: 3d, ehpe 38.90, 8 sats - 43.6159350 7.0669883 ALT=19380
+0d,01:00:23.397. (GNSS) MT. FIX: 3d, ehpe 33.90, 9 sats - 43.6159083 7.0670900 ALT=19930
+0d,01:00:24.401. (GNSS) MT. FIX: 3d, ehpe 30.80, 9 sats - 43.6159216 7.0670833 ALT=19840
+0d,01:00:25.379. (GNSS) MT. FIX: 3d, ehpe 28.30, 9 sats - 43.6159350 7.0670833 ALT=19860
+0d,01:00:25.380. (GNSS) MT. Acceptable EHPE:2830, target<3000 time:5s
+0d,01:00:25.380. (GEO) MT GNSS result type gnss, status: success
+0d,01:00:25.381. (GNSS) MT. GNSS fix complete
+0d,01:00:25.381. (GNSS) MT. RF switch event: released
+0d,01:00:25.382. (GNSS) MT. Set power to standby
+0d,01:00:25.382. (GEO) Geolocation results. Nb techno: 2
+0d,01:00:25.383. (GEO)  -Techno ble scan1, geoloc status: success. Techno status: success. Nb beacons: 4
+0d,01:00:25.383. (GEO)  -Techno gnss, geoloc status: success. Techno status: fix success
+0d,01:00:25.384. (APP) EVT. got event class: geolocation, type: done
+0d,01:00:25.385. (APP) GEO-MGR. FSM state: acquiring, event: done, next state: wait-timer
+0d,01:00:25.385. (APP) GEO-MGR. Process result for triggers 0x00000008
+0d,01:00:25.386. (APP) GEO-MGR. FSM state: wait-timer, event: complete, next state: idle
+0d,01:00:25.387. (APP) GEO-MGR. Process trigger. Active trigger: prev: 0x0, processed: 0x0, new: 0x0. Cur prio: -1, New_prio: -1. New_prof: -1, to: -1
+0d,01:00:25.388. (APP) EVT. got event class: geolocation, type: complete
+0d,01:00:25.389. (GNSS) MT. Started
+0d,01:00:25.389. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,01:00:25.389. (LR1110) TX.Size: 36. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,01:00:25.393. (LORA) TX request status: success
+0d,01:00:25.394. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 7e 00 04 00 08 ac 23 3f 52 bf 27 cc ac 23 3f 2a f7 6e c0 ac 23 3f 28 70 46 b1 ac 23 3f 2a f7 66 b0 
+0d,01:00:25.396. (LORA) TX queued
+0d,01:00:25.396. (LORA) TX queued
+0d,01:00:27.395. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,01:00:27.794. (GNSS) MT. Set power to standby
+0d,01:00:35.819. (LORA) RX LoRa event: TX success
+0d,01:00:35.820. (LR1110) TX.Size: 24. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,01:00:35.820. (LORA) TX request status: success
+0d,01:00:35.821. (LORA) TX (Port: 19, DR 16, TX#1): 90 64 1a 7e 11 0a 00 08 19 ff 43 76 04 36 59 f1 00 c6 09 52 00 1c 1c 69 
+0d,01:00:41.805. (LORA) RX LoRa event: TX success
+0d,01:00:41.806. (LORA) TX. No buffer to send
+
+super> 
+super> 
+super> 456
+Unknown: 456
+ble         config      geoloc      gnss        help        logout      
+lora        network     power       ?           system      wifi        
+ERROR
+super> sys res
+Resetting...
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.876. (LR1110) Reset done
+0d,00:00:00.878. (ACC) Init success
+0d,00:00:02.916. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.917. (CFG) No config file detected at 0x80872e4
+0d,00:00:02.917. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.918. (ACC) Update success
+0d,00:00:02.920. (GNSS) MT. Started
+0d,00:00:02.921. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.922. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.923. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.923. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.946. (ACC) Open success
+0d,00:00:02.946. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.950. (ACC) Disable success
+0d,00:00:02.950. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.951. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.951. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.952. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.953. (LORA) Joining the network
+0d,00:00:03.961. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.963. (APP) DEV. Temp:31, new high: no, new low: no
+0d,00:00:04.002. (APP) PWR. Battery remaining: 100%. Consumption: 0.045 mAh
+0d,00:00:04.493. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.515. (ACC) Enable success
+0d,00:00:04.977. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:05.870. (GNSS) MT. Power down
+00:02.919. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.920. (CFG) No config file detected at 0x8087344
+0d,00:00:02.920. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.921. (ACC) Update success
+0d,00:00:02.923. (GNSS) MT. Started
+0d,00:00:02.924. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.925. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.926. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.926. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.949. (ACC) Open success
+0d,00:00:02.950. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.954. (ACC) Disable success
+0d,00:00:02.955. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.957. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.959. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.961. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.963. (LORA) Joining the network
+0d,00:00:03.702. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:04.005. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:04.007. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:00:04.045. (APP) WARNING! PWR. Battery low detected
+0d,00:00:04.046. (APP) PWR. Battery remaining: 1%. Consumption: 1269304704.168 mAh
+0d,00:00:04.046. (APP) EVT. got event class: power, type: low
+0d,00:00:04.210. (GNSS) MT. Power down
+0d,00:00:04.523. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.543. (ACC) Enable success
+0d,00:00:12.628. (LORA) RX LoRa event: join success
+0d,00:00:12.629. (LORA) FSM state: joining, event: success, next state: active
+login: 
+login: ***
+super> super> 
+super> 
+super> conf sh gr 2
+Group 2 (geoloc)
+ Full ID   ID    Name                         Type      Value
+ 0x0200    0     geoloc_motion_period         Integer   600        (0x00000258)
+ 0x0201    1     geoloc_static_period         Integer   600        (0x00000258)
+ 0x0202    2     geoloc_sos_period            Integer   600        (0x00000258)
+ 0x0203    3     geoloc_motion_nb_start       Integer   1          (0x00000001)
+ 0x0204    4     geoloc_motion_nb_stop        Integer   1          (0x00000001)
+ 0x0205    5     geoloc_start_stop_period     Integer   500        (0x000001f4)
+ 0x0206    6     geoloc_gnss_hold_on_mode     Integer   0          (0x00000000)
+ 0x0207    7     geoloc_gnss_hold_on_timeout  Integer   0          (0x00000000)
+ 0x0208    8     geoloc_profile0_triggers     Integer   0          (0x00000000)
+ 0x0209    9     geoloc_profile1_triggers     Integer   0          (0x00000000)
+ 0x020a    10    geoloc_profile2_triggers     Integer   0          (0x00000000)
+ 0x020b    11    geoloc_gbe_profile0_techno   Array     {06,00,00,00,00,00}
+ 0x020c    12    geoloc_gbe_profile1_techno   Array     {06,00,00,00,00,00}
+ 0x020d    13    geoloc_gbe_profile2_techno   Array     {06,00,00,00,00,00}
+OK
+super> 
+super> 
+super> conf sh gr 8
+Group 8 (network)
+ Full ID   ID    Name                         Type      Value
+ 0x0800    0     net_selection                Integer   0          (0x00000000)
+ 0x0801    1     net_reconnection_spacing     Integer   600        (0x00000258)
+OK
+super> 0d,00:10:04.252. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:10:04.253. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:10:04.292. (APP) WARNING! PWR. Battery low detected
+0d,00:10:04.293. (APP) PWR. Battery remaining: 1%. Consumption: 1269304704.175 mAh
+0d,00:10:04.293. (APP) EVT. got event class: power, type: low
+0d,00:10:04.294. (LR1110) TX.Size: 9. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:10:04.297. (LORA) TX request status: success
+0d,00:10:04.297. (LORA) TX (Port: 19, DR 16, TX#1): 08 01 a5 36 01 0d 80 00 46 
+0d,00:10:04.298. (LORA) TX queued
+0d,00:10:08.741. (LORA) RX LoRa event: TX success
+0d,00:10:08.742. (LORA) TX. No buffer to send
+456
+Unknown: 456
+ble         config      geoloc      gnss        help        logout      
+lora        network     power       ?           system      wifi        
+ERROR
+super> sys res
+Resetting...
+Welcome to AOS
+
+0d,00:00:00.015. (APP) Starting application
+0d,00:00:00.876. (LR1110) Reset done
+0d,00:00:00.878. (ACC) Init success
+0d,00:00:02.917. (CFG) Compatible version Flash: 1.0.0.0 with Code: 1.0.0.0. 
+0d,00:00:02.918. (CFG) No config file detected at 0x8087344
+0d,00:00:02.919. (APP) EVT. got event class: configuration, type: 0xffffffff
+0d,00:00:02.920. (ACC) Update success
+0d,00:00:02.921. (GNSS) MT. Started
+0d,00:00:02.922. (APP) GNSS-MGR. Refreshing MT GPS almanac
+0d,00:00:02.923. (APP) EVT. got event class: core, type: app init done
+0d,00:00:02.924. (APP) Main. FSM state: init, event: start, next state: startup
+0d,00:00:02.924. (APP) Main. FSM state: startup, event: start, next state: active
+0d,00:00:02.947. (ACC) Open success
+0d,00:00:02.947. (APP) EVT. got event class: buzzer, type: on
+0d,00:00:02.951. (ACC) Disable success
+0d,00:00:02.951. (APP) EVT. got event class: core, type: core running
+0d,00:00:02.952. (APP) GEO-MGR. FSM state: off, event: start, next state: idle
+0d,00:00:02.953. (APP) NET. FSM state: off, event: start, next state: main-connecting
+0d,00:00:02.954. (LORA) FSM state: shutdown, event: start, next state: joining
+0d,00:00:02.954. (LORA) Joining the network
+0d,00:00:03.964. (APP) EVT. got event class: core, type: Device monitoring
+0d,00:00:03.966. (APP) DEV. Temp:30, new high: no, new low: no
+0d,00:00:04.004. (APP) WARNING! PWR. Battery low detected
+0d,00:00:04.006. (APP) PWR. Battery remaining: 1%. Consumption: 1269304704.169 mAh
+0d,00:00:04.007. (APP) EVT. got event class: power, type: low
+0d,00:00:04.494. (APP) EVT. got event class: buzzer, type: off
+0d,00:00:04.515. (ACC) Enable success
+0d,00:00:04.517. (APP) GNSS-MGR. Refreshing MT BEIDOU almanac
+0d,00:00:04.986. (GNSS) MT. Power down
+0d,00:00:14.826. (LORA) RX LoRa event: join success
+0d,00:00:14.826. (LORA) FSM state: joining, event: success, next state: active
+0d,00:00:14.827. (APP) NET. LoRa notif network-up received
+0d,00:00:14.828. (APP) NET. FSM state: main-connecting, event: success, next state: main-connected
+0d,00:00:14.828. (LORA) TX. No buffer to send
+0d,00:00:14.830. (APP) EVT. got event class: network, type: main up
+0d,00:00:14.831. (APP) Main. No FSM entry for cur state: active and event:done
+0d,00:00:14.831. (APP) EVT. got event class: network, type: data-pipe 1 up
+0d,00:00:14.833. (LORA) TX request status: busy
+0d,00:00:14.833. (LORA) TX queued
+0d,00:00:16.871. (LORA) TX request status: busy
+0d,00:00:18.878. (LORA) TX request status: busy
+0d,00:00:20.480. (LR1110) RX Time update (status: 1)
+0d,00:00:20.480. (LR1110) Correct GPS time: 1404042404.467
+0d,00:00:20.481. (LORA) RX LoRa event: RX time update success
+0d,00:00:20.481. (LR1110) TX.Size: 40. Rqst DR: ADR, Actual: DR0. Actual ADR: yes
+0d,00:00:20.482. (LORA) TX request status: success
+0d,00:00:20.482. (LORA) TX (Port: 19, DR 16, TX#1): 08 01 ff ff 00 1e 00 01 00 c3 01 00 00 00 22 01 08 00 00 00 00 20 50 47 00 1a 0d 80 00 00 00 00 00 00 00 00 00 00 00 00 
+0d,00:00:20.487. (APP) EVT. got event class: core, type: core systime update
+0d,00:00:20.488. (APP) GNSS-MGR. Check almanac validity
+0d,00:00:20.919. (LORA) TX. No buffer to send
+0d,00:00:25.569. (LORA) RX LoRa event: TX success
+0d,00:00:25.570. (LORA) TX. No buffer to send
+0d,00:00:48.327. (ACC) Vector(mg): x:-92, y:23, z:1012
+0d,00:00:48.328. (ACC) Callback. Notif sleep

@@ -1,0 +1,149 @@
+{
+     "Description":
+    {
+        "Test_callback_function" : "Lora_Link_Check",
+        "Test_description" : "In this test, it will check lora link check, lora probe period, lora probe attempt, lora downlink trigger period"    },
+
+    "Config":
+    {
+        "Action" : "sleep 5"
+    },
+
+    "1": {
+        "State": "MOTION_START_COMMAND",
+        "Condition": "type: motion start",
+        "Timeout": 5,
+        "Action": "sys eve 3 0",
+        "Result": null,
+        "Expected_value": null
+    },
+    "2": {
+        "State": "LORA_LINK_CHECK",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "net lora link",
+        "Result": null,
+        "Expected_value": null
+    },
+    "3": {
+        "State": "LORA_LINK_SUCCESS",
+        "Condition": "Link check success",
+        "Timeout": 20,
+        "Action": null,
+        "Result":  null,
+        "Expected_value": null
+    },
+    "4": {
+        "State": "LORA_FAIL_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "net lora debug lf",
+        "Result": null,
+        "Expected_value": null
+    },
+    "5": {
+        "State": "LORA_PROBE_PERIOD_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "conf set 0x903 120",
+        "Result": null,
+        "Expected_value": null
+    },
+    "6": {
+        "State": "LORA_PROBE_ATTEMPT_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "conf set 0x902 2",
+        "Result": null,
+        "Expected_value": null
+    },
+    "7": {
+        "State": "LORA_RETRY_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "conf set 0x801 180",
+        "Result": null,
+        "Expected_value": null
+    },
+    "8": {
+        "State": "LORA_TIMEOUT_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "conf set 0x900 30",
+        "Result": null,
+        "Expected_value": null
+    },
+    "9": {
+        "State": "ATTEMPT_ONE_FAIL",
+        "Condition": "Link check failure",
+        "Timeout": 125,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 120
+    },
+    "10": {
+        "State": "ATTEMPT_TWO_FAIL",
+        "Condition": "Link check failure",
+        "Timeout": 125,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 120
+    },
+    "11": {
+        "State": "LORA_DEBUG_NO_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "net lora debug no",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "12": {
+        "State": "LORA_JOIN_START",
+        "Condition": "main-connecting",
+        "Timeout": 200,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 180
+    },
+
+    "13": {
+        "State": "LORA_JOIN_SUCCESS",
+        "Condition": "join success",
+        "Timeout": 35,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+     "14": {
+        "State": "LORA_DOWNLINK_CONFIG",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "conf set 0x901 20",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "15": {
+        "State": "LORA_DOWNLINK_TRIGGER",
+        "Condition": "Trigger downlink",
+        "Timeout": 25,
+        "Action": null,
+        "Result": "to_check",
+        "Expected_value": 20
+    },
+
+    "16": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}
+
+
+
+

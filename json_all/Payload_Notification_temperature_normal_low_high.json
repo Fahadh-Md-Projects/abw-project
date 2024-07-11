@@ -1,0 +1,75 @@
+{
+    "Description": {
+        "Test_callback_function": "Payload",
+        "Test_description": "This test will check if received payload is equal to expected payload on Temperature notification, Based on the notification configuration 1792, \n\nIn this test, it will check (I) On Temperature notification - normal : \n-> Single frame (value 10 at index 0), Temperature normal report (value 0x22 at index 4), \n\n(II) On Temperature notification - low : \n-> Single frame (value 10 at index 0), Temperature low report (value 0x21 at index 4), \n\n(III) On Temperature notification - high : \n-> Single frame (value 10 at index 0), Temperature high report (value 0x20 at index 4)."
+    },
+
+    "Config":
+    {
+        "Motion_stop" : "sys eve 3 1",
+        "Conf_notification_temp" : "conf set 0x102 1792"
+    },
+
+    "1": {
+        "State": "TEMP_NORMAL_COMMAND",
+        "Condition": "Class: temperature, type: normal",
+        "Timeout": 5,
+        "Action": "sys eve 5 0",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "2": {
+        "State": "TRANSMIT_1_TEMP_NORMAL",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 22 xx"
+    },
+
+    "3": {
+        "State": "TEMP_LOW_COMMAND",
+        "Condition": "Class: temperature, type: low",
+        "Timeout": 5,
+        "Action": "sys eve 5 1",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "4": {
+        "State": "TRANSMIT_2_TEMP_LOW",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 21 xx"
+    },
+
+    "5": {
+        "State": "TEMP_HIGH_COMMAND",
+        "Condition": "Class: temperature, type: high",
+        "Timeout": 5,
+        "Action": "sys eve 5 2",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "6": {
+        "State": "TRANSMIT_3_TEMP_HIGH",
+        "Condition": "TX#1",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "08 xx xx xx 20 xx"
+    },
+
+    "7": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}

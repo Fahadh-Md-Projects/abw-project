@@ -1,0 +1,162 @@
+{
+     "Description":
+    {
+        "Test_callback_function" : "Payload",
+        "Test_description" : "This test will check if received payload is equal to expected payload, Based on the acquisition configuration 83,82,86, We will get bluetooth always done, wifi always done, and gnss acquisitions always done. Always done means - always do the acquisition. \n\nIn this test, it will check, (I) On BLE success, WIFI success, GNSS success, BLE, WIFI and GNSS are reported \n-> Frame 1: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 0, FID=0, last = 0), BLE success report (value 0x04 at index 5), mac address of ble beacon (ac 23 3f 52 bf 27 at index 8-13), \nFrame 2: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 0, FID=1, last = 0), WIFI success report (value 0x03 at index 5), mac address of wifi (08 bf b8 8e 7c a8 at index 8-13), \nFrame 3: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 0, FID=2, last = 1), GNSS success report (value 0x0a at index 5), latitude and longitude of gnss (value 19 ff xx xx 04 36 at index 7-12), \n\n(II) On BLE failure, WIFI failure, GNSS failure, BLE, WIFI and GNSS are reported, \nFrame 1: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 1, FID=0, last = 0), BLE failure report (value 0x44 at index 5), \nFrame 2: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 1, FID=1, last = 0), WIFI failure report (value 0x43 at index 5), \nFrame 3: Multi-frame set (byte at index 0 > 0x80). M-header (index 4): Group= 1, FID=2, last = 1), GNSS failure report (value 0xa7 at index 5)."
+    },
+
+    "Config":
+    {
+        "Acquisition" : "conf set 0x20b {83,82,86,00,00,00}",
+        "Action" : "sleep 5",
+        "Trigger" : "conf set 0x208 1",
+        "Motion_stop" : "sys eve 3 1"
+    },
+
+    "1": {
+        "State": "EVENT_START_COMMAND",
+        "Condition": "type: pos on demand",
+        "Timeout": 5,
+        "Action": "sys eve 9 12",
+        "Result": null,
+        "Expected_value": null
+    },
+    "2": {
+        "State": "BLE_SUCCESS",
+        "Condition": "BLE result status: success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "3": {
+        "State": "WIFI_SUCCESS",
+        "Condition": "WIFI result status: success",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "4": {
+        "State": "GNSS_SUCCESS",
+        "Condition": "MT GNSS result type gnss, status: success",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "5": {
+        "State": "TRANSMIT_1_BLE",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 00 04 xx xx ac 23 3f 52 bf 27"
+    },
+
+    "6": {
+        "State": "TRANSMIT_1_WIFI",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 01 03 xx xx 08 bf b8 8e 7c a8"
+    },
+
+    "7": {
+        "State": "TRANSMIT_1_GNSS",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 12 0a xx xx 19 ff xx xx 04 36"
+    },
+
+
+   "8": {
+        "State": "SLEEP_5_SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 5",
+        "Result": null,
+        "Expected_value": null
+    },
+
+
+   "9": {
+        "State": "BLE_FAILURE_CONFIG",
+        "Condition": "OK",
+        "Timeout": 15,
+        "Action": "conf set 0x0503 5",
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "10": {
+        "State": "WIFI_FAILURE_CONFIG",
+        "Condition": "OK",
+        "Timeout": 15,
+        "Action": "conf set 0x0404 1",
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "11": {
+        "State": "GNSS_FAILURE_CONFIG",
+        "Condition": "OK",
+        "Timeout": 15,
+        "Action": "conf set 0x0300 5",
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "12": {
+        "State": "EVENT_START_COMMAND",
+        "Condition": "type: pos on demand",
+        "Timeout": 5,
+        "Action": "sys eve 9 12",
+        "Result": null,
+        "Expected_value": null
+    },
+
+
+  "13": {
+        "State": "TRANSMIT_2_BLE",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 20 44 xx"
+    },
+
+  "14": {
+        "State": "TRANSMIT_2_WIFI",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 21 43 xx"
+    },
+
+  "15": {
+        "State": "TRANSMIT_2_GNSS",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": "90 xx xx xx 32 2a xx"
+    },
+
+  "16": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}
+

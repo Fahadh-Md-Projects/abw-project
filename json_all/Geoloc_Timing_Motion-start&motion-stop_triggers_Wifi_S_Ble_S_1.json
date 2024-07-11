@@ -1,0 +1,106 @@
+{
+    "Description":
+    {
+        "Test_callback_function" : "Geoloc_Timing",
+        "Test_description" : "This test will check if received time is equal to expected time, it will do wifi skip on success, ble skip on success. Skip on success means if one acquisition succeed, it will not do next acquisition. \nBased on the trigger configuration - 12 (Trigger in motion start (bit 2 = 4) and Trigger in motion stop (bit 3 = 8), (bit 2 + bit 3 = 12)). When motion started, the geoloc motion period should be around 20 seconds, and when motion end, the geoloc static period should be around 20 seconds."
+    },
+
+    "Config":
+    {
+        "Geoloc_motion_nb_start" : "conf set 0x203 2",
+        "Geoloc_motion_nb_stop" : "conf set 0x204 3",
+        "Geoloc_start_stop_period" : "conf set 0x205 20",
+        "Acquisition" : "conf set 0x20b {02,03,00,00,00,00}",
+        "Action" : "sleep 10",
+        "Trigger" : "conf set 0x208 12"
+    },
+
+    "1": {
+        "State": "MOTION_START_COMMAND",
+        "Condition": "type: motion start",
+        "Timeout": 5,
+        "Action": "sys eve 3 0",
+        "Result": null,
+        "Expected_value": null
+    },
+    "2": {
+        "State": "GEOLOC_ACQ_1",
+        "Condition": "TX queued",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "3": {
+        "State": "GEOLOC_MOTION_PERIOD_1",
+        "Condition": "type: geoloc timeout acq",
+        "Timeout": 50,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 20
+    },
+    "4": {
+        "State": "GEOLOC_ACQ_2",
+        "Condition": "TX queued",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "5": {
+        "State": "SLEEP 15 SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 15",
+        "Result": null,
+        "Expected_value": null
+    },
+    "6": {
+        "State": "MOTION_STOP_COMMAND",
+        "Condition": "type: motion end",
+        "Timeout": 5,
+        "Action": "sys eve 3 1",
+        "Result": null,
+        "Expected_value": null
+    },
+    "7": {
+        "State": "GEOLOC_ACQ_3",
+        "Condition": "TX queued",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "8": {
+        "State": "GEOLOC_STATIC_PERIOD_1",
+        "Condition": "type: geoloc timeout acq",
+        "Timeout": 50,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 20
+    },
+    "9": {
+        "State": "GEOLOC_ACQ_4",
+        "Condition": "TX queued",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "10": {
+        "State": "GEOLOC_STATIC_PERIOD_2",
+        "Condition": "type: geoloc timeout acq",
+        "Timeout": 50,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": 20
+    },
+    "11": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}

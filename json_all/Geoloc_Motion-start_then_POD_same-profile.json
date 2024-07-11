@@ -1,0 +1,54 @@
+{
+     "Description":
+    {
+        "Test_callback_function" : "Geoloc_Timing",
+        "Test_description" : "This test will check the triggers when motion start and POS event sent continuously in same profile"    },
+
+    "Config":
+    {
+        "Acquisition" : "conf set 0x20b {06,00,00,00,00,00}",
+        "Action" : "sleep 10",
+        "Trigger" : "conf set 0x208 5"
+    },
+
+    "1": {
+        "State": "MOTION_START_COMMAND",
+        "Condition": "type: motion start",
+        "Timeout": 5,
+        "Action": "sys eve 3 0",
+        "Result": null,
+        "Expected_value": null
+    },
+    "2": {
+        "State": "GEOLOC_ACQ",
+        "Condition": "Clearing previous data",
+        "Timeout": 20,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "3": {
+        "State": "POS_COMMAND",
+        "Condition": "type: pos on demand",
+        "Timeout": 20,
+        "Action": "sys eve 9 12",
+        "Result": null,
+        "Expected_value": null
+    },
+    "4": {
+        "State": "RESULT_TRIGGER",
+        "Condition": "0x00000005",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "5": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "Description":
+    {
+        "Test_callback_function" : "Uplink_MQTT",
+        "Test_description" : "This test will check if received data from LORA using mqtt is equal to expected data, Based on the acquisition configuration 03,02,86, We will get bluetooth skip on success, wifi skip on success, and gnss always done acquisitions. Because of the skip on success, if one acquisition succeed, it will not do next acquisition. Always done means always do the acquisition. \n\nIn this test, it tests the parameter in the expected value. (I) Lora tx config : 266244, means dual transmission in motion, transmission 1 : DR4, transmission 2 : DR2, \n(II) Lora tx config : 2105348, means dual transmission in motion, transmission 1 : DR5, transmission 2 : DR5"
+    },
+
+    "Config":
+    {
+        "Acquisition" : "conf set 0x20b {03,82,86,00,00,00}",
+        "Action" : "sleep 5",
+        "Trigger" : "conf set 0x208 1",
+        "Lora_port_config" : "conf set 0x905 10",
+        "Lora_tx_config" : "conf set 0x904 266244",
+        "Motion_start" : "sys eve 3 0"
+    },
+
+    "1": {
+        "State": "EVENT_START_COMMAND",
+        "Condition": "type: pos on demand",
+        "Timeout": 5,
+        "Action": "sys eve 9 12",
+        "Result": null,
+        "Expected_value": null
+    },
+    "2": {
+        "State": "BLE_SUCCESS",
+        "Condition": "BLE result status: success",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "3": {
+        "State": "TRANSMIT_1_BLE",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "4": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 8, "payload_hex" : "90 xx xx xx 00 84 xx xx ac 23 3f 52 bf 27"}
+    },
+
+    "5": {
+        "State": "TRANSMIT_2_BLE",
+        "Condition": "TX#2",
+        "Timeout": 20,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+    "6": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 10, "payload_hex" : "90 xx xx xx 00 84 xx xx ac 23 3f 52 bf 27"}
+    },
+
+   "7": {
+        "State": "TRANSMIT_1_WIFI",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+   "8": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 8, "payload_hex" : "90 xx xx xx 01 x3 xx xx"}
+    },
+
+   "9": {
+        "State": "TRANSMIT_2_WIFI",
+        "Condition": "TX#2",
+        "Timeout": 20,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+   "10": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 10, "payload_hex" : "90 xx xx xx 01 x3 xx xx"}
+    },
+
+   "11": {
+        "State": "TRANSMIT_1_GNSS",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "12": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 8, "payload_hex" : "90 xx xx xx 12 xa xx xx"}
+    },
+
+   "13": {
+        "State": "TRANSMIT_2_GNSS",
+        "Condition": "TX#2",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "14": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 10, "payload_hex" : "90 xx xx xx 12 xa xx xx"}
+    },
+
+   "15": {
+        "State": "SLEEP_5_SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 5",
+        "Result": null,
+        "Expected_value": null
+    },
+   "16": {
+        "State": "LORA_TX_CONFIG",
+        "Condition": "OK",
+        "Timeout": 15,
+        "Action": "conf set 0x904 2105348",
+        "Result": null,
+        "Expected_value": null
+    },
+
+
+   "17": {
+        "State": "BLE_FAILURE_CONFIG",
+        "Condition": "OK",
+        "Timeout": 15,
+        "Action": "conf set 0x0503 5",
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "18": {
+        "State": "EVENT_START_COMMAND",
+        "Condition": "type: pos on demand",
+        "Timeout": 5,
+        "Action": "sys eve 9 12",
+        "Result": null,
+        "Expected_value": null
+    },
+
+
+   "19": {
+        "State": "TRANSMIT_1_WIFI",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+   "20": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 7, "payload_hex" : "90 xx xx xx 20 x3 xx xx"}
+    },
+   "21": {
+        "State": "TRANSMIT_2_WIFI",
+        "Condition": "TX#2",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+   "22": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 7, "payload_hex" : "90 xx xx xx 20 x3 xx xx"}
+    },
+
+
+   "23": {
+        "State": "TRANSMIT_1_GNSS",
+        "Condition": "TX#1",
+        "Timeout": 100,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "24": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 7, "payload_hex" : "90 xx xx xx 31 xa xx xx"}
+    },
+   "25": {
+        "State": "TRANSMIT_2_GNSS",
+        "Condition": "TX#2",
+        "Timeout": 20,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+   "26": {
+        "State": "LORA_RX",
+        "Condition": "LoRa event: TX success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": "to check",
+        "Expected_value": {"FPort" : 10, "SpFact": 7, "payload_hex" : "90 xx xx xx 31 xa xx xx"}
+    },
+
+   "27": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+}
+

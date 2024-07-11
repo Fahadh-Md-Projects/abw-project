@@ -1,0 +1,127 @@
+{
+     "Description":
+    {
+        "Test_callback_function" : "Downlink_MQTT",
+        "Test_description" : "In this test, it will publish the downlink payload via MQTT publish, and checks the result in AT3. To receive the downlink in AT3, we needs to send system event command. \n\n(I) payload : 0804 - system status, \n(II) payload : 0805 - position on demand with ble"  },
+
+    "Config":
+    {
+        "Acquisition" : "conf set 0x20b {03,00,00,00,00,00}",
+        "Action" : "sleep 10",
+        "Trigger" : "conf set 0x208 5"
+    },
+
+    "1": {
+        "State": "MOTION_STOP_COMMAND",
+        "Condition": "type: motion end",
+        "Timeout": 5,
+        "Action": "sys eve 3 1",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "2": {
+        "State": "SYS_STATUS_PUBLISH",
+        "Condition": true,
+        "Timeout": 10,
+        "Action": "publish 0804",
+        "Result":  null,
+        "Expected_value": null
+    },
+
+    "3": {
+        "State": "SLEEP_10_SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 10",
+        "Result":  null,
+        "Expected_value": null
+    },
+
+    "4": {
+        "State": "SYS_EVENT_COMMAND",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "sys eve 9 10",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "5": {
+        "State": "SYSTEM_STATUS",
+        "Condition": "type: Status UL",
+        "Timeout": 15,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "6": {
+        "State": "SLEEP_10_SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 10",
+        "Result":  null,
+        "Expected_value": null
+    },
+
+    "7": {
+        "State": "SYS_POS_PUBLISH",
+        "Condition": true,
+        "Timeout": 10,
+        "Action": "publish 0805",
+        "Result":  null,
+        "Expected_value": null
+    },
+
+    "8": {
+        "State": "SLEEP_10_SEC",
+        "Condition": true,
+        "Timeout": 20,
+        "Action": "sleep 10",
+        "Result":  null,
+        "Expected_value": null
+    },
+
+    "9": {
+        "State": "SYS_EVENT_COMMAND",
+        "Condition": "OK",
+        "Timeout": 5,
+        "Action": "sys eve 9 10",
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "10": {
+        "State": "SYSTEM_POS",
+        "Condition": "type: pos on demand",
+        "Timeout": 15,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "11": {
+        "State": "BLE_SUCCESS",
+        "Condition": "BLE result status: success",
+        "Timeout": 15,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    },
+
+    "12": {
+        "State": "END",
+        "Condition": null,
+        "Timeout": 0,
+        "Action": null,
+        "Result": null,
+        "Expected_value": null
+    }
+
+
+}
+
+
+
+
